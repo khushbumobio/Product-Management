@@ -1,0 +1,7 @@
+{"info":{"__v":0,"_id":"63ca1f5ccbbbf78b504ea70b","address":"vadodara","email":"test111@gmail.com","merchent_type":"large","name":"Test111","password":"$2b$10$VpK49C0s4WQIDjpWScE6S.WMGyucmraK2j91YD35rBDOSjzS.PzJm","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-20T04:58:04.076Z"}
+{"info":{"__v":0,"_id":"63ca1fdf634fa2433d4dbae9","address":"vadodara","email":"test1s11@gmail.com","merchent_type":"large","name":"Test111","password":"$2b$10$jsk.JqIETLkZFdWthXHd0e7Ee56xEjH56arvGibKc9QWLlRK.NadC","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":{"message":"user created"},"timestamp":"2023-01-20T05:00:15.306Z"}
+{"info":{"__v":0,"_id":"63ca18476755d82f208bfcd1","address":"vadodara","email":"test1@gmail.com","merchent_type":"large","name":"Test11","password":"$2b$10$rjb5C7jkOy7JRqAqncsXz.4K3/hIbBphQnBCafLWqy5/Tire65m1y","phone_number":9090909099,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":{"message":"user updated"},"timestamp":"2023-01-20T06:29:13.521Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:30:32.401Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:30:45.008Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:32:36.607Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:33:35.570Z"}
