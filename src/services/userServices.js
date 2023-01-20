@@ -12,9 +12,6 @@ class userService {
      */
 static async createUser(requestParams) {
     try {
-        if(user.role==!admin){
-            return ({ error: config.notAllowed });
-        }
         if (!(requestParams.name || requestParams.email || requestParams.password || requestParams.phone_number || requestParams.address || requestParams.role || requestParams.merchent_type)) {
             return ({ error: config.emptyFields });
         }

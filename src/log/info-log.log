@@ -5,3 +5,16 @@
 {"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:30:45.008Z"}
 {"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:32:36.607Z"}
 {"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:33:35.570Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:12:01.214Z"}
+{"info":{"__v":3,"_id":"63ca18476755d82f208bfcd1","address":"vadodara","email":"test1@gmail.com","merchent_type":"large","name":"Test11","password":"$2b$10$rjb5C7jkOy7JRqAqncsXz.4K3/hIbBphQnBCafLWqy5/Tire65m1y","phone_number":9090909099,"role":"customer","token":"0","tokensAuth":[{"_id":"63ca3e96b93ecb9379dac6f2","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2NhMTg0NzY3NTVkODJmMjA4YmZjZDEiLCJpYXQiOjE2NzQxOTg2Nzh9.Uk9qW7FZthLYdzWRMPm8swMQv4YvO_4OgEIJoArI594"}]},"level":"info","message":{"message":"user updated"},"timestamp":"2023-01-20T07:12:19.227Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:13:11.820Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:13:25.773Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:13:41.831Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:13:44.339Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:14:13.299Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:14:43.637Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:14:46.104Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:15:42.841Z"}
+{"info":{"__v":0,"_id":"63ca3fa505b515969167546b","address":"vadodara","email":"adi@gmail.com","merchent_type":"large","name":"adi","password":"$2b$10$QAxUEOrZTtyqdnsGPMLwt.Pd/qGjO8ccoYm1MakEkKm6luo.aZGMy","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-20T07:15:49.320Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:16:38.698Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:17:03.081Z"}
