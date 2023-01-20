@@ -52,7 +52,7 @@ class authController {
     }
 
     /**
-     * profile 
+     * update profile 
      * @param {Request} req
      * @param {JSON} res
      * @returns
