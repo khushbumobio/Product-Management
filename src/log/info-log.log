@@ -18,3 +18,24 @@
 {"info":{"__v":0,"_id":"63ca3fa505b515969167546b","address":"vadodara","email":"adi@gmail.com","merchent_type":"large","name":"adi","password":"$2b$10$QAxUEOrZTtyqdnsGPMLwt.Pd/qGjO8ccoYm1MakEkKm6luo.aZGMy","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-20T07:15:49.320Z"}
 {"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:16:38.698Z"}
 {"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:17:03.081Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:57:27.868Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:57:44.474Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:58:00.807Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:58:08.023Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:58:52.927Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:58:59.920Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:00:03.528Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:41:05.151Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:41:38.195Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:41:42.032Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:42:46.755Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:42:50.630Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:43:50.812Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:44:28.466Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:44:44.785Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:44:47.426Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:45:20.156Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T11:17:03.538Z"}
+{"level":"error","message":{"error_message":"admin is not defined"},"timestamp":"2023-01-20T11:19:10.526Z"}
+{"info":{"__v":0,"_id":"63ca7aa50036fef8dd1ed026","address":"vadodara","email":"mahima@gmail.com","merchent_type":"large","name":"mahima","password":"$2b$10$xhqTRVXPnt7udFcd8JjgIuYKVVofB6zz9.uk4R9kQ5MHZPR/TNBlG","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-20T11:27:33.622Z"}
+{"info":{"__v":0,"_id":"63ca7af7e38415dc8eab9b97","address":"vadodara","email":"mahimma@gmail.com","merchent_type":"large","name":"mahima","password":"$2b$10$8y48AYiDlYXev7eSPTpXJOnUeRAjgyF833GTOe0gLHzYjO/LRDic.","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-20T11:28:55.391Z"}

@@ -4,31 +4,38 @@ const config = require("../config/config.js")
 const logger = require('../logger/logger')
 
 class userService {
-/**
-     * create user
-     * @param {object} requestParams
-     * @returns {object}
-     * @author khushbuw
-     */
-static async createUser(requestParams) {
-    try {
-        if (!(requestParams.name || requestParams.email || requestParams.password || requestParams.phone_number || requestParams.address || requestParams.role || requestParams.merchent_type)) {
-            return ({ error: config.emptyFields });
+    /**
+         * create user
+         * @param {object} requestParams
+         * @returns {object}
+         * @author khushbuw
+         */
+    static async createUser(userRole, requestParams) {
+        try {
+            if ((userRole == 'Admin') || (userRole == 'admin')) {
+
+                if (!(requestParams.name || requestParams.email || requestParams.password || requestParams.phone_number || requestParams.address || requestParams.role || requestParams.merchent_type)) {
+                    return ({ error: config.emptyFields });
+                }
+                const checkEmail = await User.findOne({ email: requestParams.email })
+                if (checkEmail) {
+                    return ({ error: config.emailExists });
+                }
+                const createdUser = await User.create(requestParams);
+                logger.info({ message: "user created", info: createdUser });
+                return ({
+                    success: config.recordCreated,
+                });
+            } else {
+                return ({ error: config.notAllowed });
+            }
+
+
+        } catch (err) {
+            logger.error({ error_message: err.message });
+            return ({ error_message: err.message });
         }
-        const checkEmail = await User.findOne({ email: requestParams.email })
-        if (checkEmail) {
-            return ({ error: config.emailExists });
-        }
-        const createdUser=await User.create(requestParams);
-        logger.info({ message: "user created",info: createdUser });
-        return ({
-            success: config.recordCreated,
-        });
-    } catch (err) {
-         logger.error({ error_message: err.message });
-        return ({ error_message: err.message });
     }
-}
 
 
 
@@ -51,20 +58,20 @@ static async createUser(requestParams) {
             }
             var userData;
             var orderBy;
-            (sortingMethod === 'desc') ? orderBy = '-1': orderBy = '1'
+            (sortingMethod === 'desc') ? orderBy = '-1' : orderBy = '1'
             var skip;
-            (page <= 1) ? skip = 0: skip = (page - 1) * limit
+            (page <= 1) ? skip = 0 : skip = (page - 1) * limit
             sortObject[sort] = orderBy;
             userData = await User.find({
-                    "$or": [
-                        { "first_name": { $regex: key } },
-                        { "last_name": { $regex: key } },
-                        { "email": { $regex: key } },
-                        { "address": { $regex: key } },
-                        { "role": { $regex: key } },
-                        { "merchant_type": { $regex: key } },
-                    ]
-                })
+                "$or": [
+                    { "first_name": { $regex: key } },
+                    { "last_name": { $regex: key } },
+                    { "email": { $regex: key } },
+                    { "address": { $regex: key } },
+                    { "role": { $regex: key } },
+                    { "merchant_type": { $regex: key } },
+                ]
+            })
                 .collation({ locale: "en" })
                 .sort(sortObject)
                 .skip(skip)
@@ -78,7 +85,7 @@ static async createUser(requestParams) {
             var finalUserData = await formatUser(userData)
             return ({ data: finalUserData })
         } catch (err) {
-             logger.error({ error_message: err.message });
+            logger.error({ error_message: err.message });
             return ({ error_message: err.message });
         }
     }
@@ -107,7 +114,7 @@ static async createUser(requestParams) {
             }
             return ({ data: userData })
         } catch (err) {
-             logger.error({ error_message: err.message });
+            logger.error({ error_message: err.message });
             return ({ error_message: err.message });
         }
     }
@@ -127,8 +134,8 @@ static async createUser(requestParams) {
             if (!isValidOperation) {
                 return ({ error: config.invalidaUpdates })
             }
-            const updatedUser=await User.findByIdAndUpdate({ _id: id }, requestParams)
-            logger.info({ message: "user updated"},{info: updatedUser });
+            const updatedUser = await User.findByIdAndUpdate({ _id: id }, requestParams)
+            logger.info({ message: "user updated" }, { info: updatedUser });
             return ({ success: config.recordUpdated })
         } catch (err) {
             logger.error({ error_message: err.message });
@@ -146,8 +153,8 @@ static async createUser(requestParams) {
         try {
             const data = await User.findOne({ _id: userId })
             if (data) {
-               const deletedUser= await User.deleteOne({ _id: userId })
-                logger.info({ message: "user deleted",info: deletedUser });
+                const deletedUser = await User.deleteOne({ _id: userId })
+                logger.info({ message: "user deleted", info: deletedUser });
                 return ({
                     success: config.recordDeleted
                 });
@@ -156,7 +163,7 @@ static async createUser(requestParams) {
                 error: config.noData
             });
         } catch (err) {
-             logger.error({ error_message: err.message });
+            logger.error({ error_message: err.message });
             return ({ error_message: err.message });
         }
     }
@@ -164,13 +171,13 @@ static async createUser(requestParams) {
 
 }
 
-  /**
- * format user data
- * @param {object} publisher 
- * @returns {object}
- * @author khushbuw
- */
-const formatUser = async(user) => {
+/**
+* format user data
+* @param {object} publisher 
+* @returns {object}
+* @author khushbuw
+*/
+const formatUser = async (user) => {
     var userDataMap = user.map((user) => {
         return {
             'id': user._id,
@@ -179,7 +186,7 @@ const formatUser = async(user) => {
             'phone_number': user.phone_number,
             'address': user.address,
             'role': user.role,
-            'merchent_type':user.merchent_type
+            'merchent_type': user.merchent_type
         };
     })
     return userDataMap;

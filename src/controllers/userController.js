@@ -13,6 +13,8 @@ class userController {
      */
     static async createUser(req, res) {
         try {
+            // return res.send('hi')
+            const userRole=req.user.role
             const requestParams = {
                 "name": req.body.name,
                 "email": req.body.email,
@@ -22,7 +24,7 @@ class userController {
                 "role": req.body.role,
                 "merchent_type": req.body.merchent_type,
             };
-            const data = await userService.createUser(requestParams);
+            const data = await userService.createUser(userRole,requestParams);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
