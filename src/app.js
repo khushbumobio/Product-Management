@@ -15,6 +15,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 
+require('./routes/indexRoutes')(app)
+
 app.get("/new", (req, res) => {
     res.json({ message: "Welcome in Product Management Project" })
 });
