@@ -64,6 +64,30 @@ class authService {
     }
 
     /**
+         * update profile
+         * @param {object} requestParams
+         * @returns {object}
+         * @author khushbuw
+         */
+    static async updateProfile(id,requestParams) {
+        try {
+            const updates = Object.keys(requestParams)
+            const allowedUpdates = ['name', 'phone_number', 'address', 'role', 'merchent_type']
+            const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
+
+            if (!isValidOperation) {
+                return ({ error: config.invalidaUpdates })
+            }
+            const updatedUser=await User.findByIdAndUpdate({ _id: id }, requestParams)
+            logger.info({ message: "user updated"},{info: updatedUser });
+            return ({ success: config.recordUpdated })
+        } catch (err) {
+            logger.error({ error_message: err.message });
+            return ({ error_message: err.message });
+        }
+    }
+
+    /**
      * logout user
      * @param {object} requestParams
      * @returns {object}
