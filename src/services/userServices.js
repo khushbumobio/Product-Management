@@ -2,6 +2,8 @@ const User = require("../models/users")
 const bcrypt = require('bcrypt');
 const config = require("../config/config.js")
 const logger = require('../logger/logger')
+const {sendMail}=require('../utills/sendMail')
+
 
 class userService {
     /**
@@ -21,7 +23,13 @@ class userService {
                 if (checkEmail) {
                     return ({ error: config.emailExists });
                 }
+                if((requestParams.role =='customer')||(requestParams.role =='Customer')){
+                    await sendMail(requestParams.name, requestParams.email, requestParams.password)
+                }
                 const createdUser = await User.create(requestParams);
+                // if((createdUser.role =='customer')||(createdUser.role =='Customer')){
+                //     await sendMail(createdUser.email, createdUser.password)
+                // }
                 logger.info({ message: "user created", info: createdUser });
                 return ({
                     success: config.recordCreated,
