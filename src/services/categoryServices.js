@@ -68,7 +68,7 @@ class categoryService {
                 .exec()
 
             if (!categoryData) {
-                return ({ error: config.userNotFound });
+                return ({ error: config.dataNotFound });
             }
             // call getCategoryData and get users data
             var finalCategoryData = await formatCategory(categoryData)
@@ -137,15 +137,20 @@ class categoryService {
         try {
             const data = await Category.findOne({ _id: catId })
             if (data) {
-                const deletedCategory = await Category.deleteOne({ _id: catId })
-                logger.info({ message: "Category deleted", info: deletedCategory });
-                return ({
-                    success: config.recordDeleted
-                });
+              const checkData = await Product.findOne({ country_id: data._id });
+              if (!checkData) {
+                await Country.deleteOne({ _id: catId });
+                return {
+                  success: config.recordDeleted,
+                };
+              }
+              return {
+                error: config.categoryAlreadyAssign,
+              };
             }
-            return ({
-                error: config.noData
-            });
+            return {
+              error: config.noData,
+            };
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });

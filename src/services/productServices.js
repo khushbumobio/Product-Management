@@ -88,7 +88,7 @@ class productService {
             const id = catId
             const data = await Product.findOne({ _id: id })
             if (!data) {
-                return ({ error: config.userNotFound });
+                return ({ error: config.dataNotFound });
             }
             const productData = {
                 'id': data._id,

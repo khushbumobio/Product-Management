@@ -18,5 +18,7 @@ const config = {
     emailUser: "add your email",
     emailPassword: "add your password",
     greetings: 'Hello ',
+    categoryAlreadyAssign: "Category already assign",
+    dataNotFound: "Data not found"
 }
 module.exports=config;
