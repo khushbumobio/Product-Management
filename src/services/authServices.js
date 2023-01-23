@@ -69,7 +69,7 @@ class authService {
          * @returns {object}
          * @author khushbuw
          */
-    static async updateProfile(id,requestParams) {
+    static async updateProfile(id, requestParams) {
         try {
             const updates = Object.keys(requestParams)
             const allowedUpdates = ['name', 'phone_number', 'address', 'role', 'merchent_type']
@@ -78,12 +78,38 @@ class authService {
             if (!isValidOperation) {
                 return ({ error: config.invalidaUpdates })
             }
-            const updatedUser=await User.findByIdAndUpdate({ _id: id }, requestParams)
-            logger.info({ message: "user updated"},{info: updatedUser });
+            const updatedUser = await User.findByIdAndUpdate({ _id: id }, requestParams)
+            logger.info({ message: "user updated" }, { info: updatedUser });
             return ({ success: config.recordUpdated })
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
+        }
+    }
+
+    /**
+     * generate Password 
+     * @param {Request} req
+     * @param {JSON} res
+     * @returns
+     * @author khushbuw
+     */
+    static async generatePassword(id, requestParams) {
+        try {
+            const user = await User.findOne({ _id:id })
+            if (!user) {
+                return { error: config.userNotExists }
+            }
+            if ((user.role == 'customer') || (user.role == 'Customer')) {
+                const updatedUser = await User.findByIdAndUpdate({ _id: id }, requestParams)
+                logger.info({ message: "user password updated" }, { info: updatedUser });
+                return ({ success: config.recordUpdated })
+            } else {
+                return { error: config.userNotCustomer }
+            }
+        } catch (err) {
+            logger.error({ error_message: err.message });
+            return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
         }
     }
 
