@@ -1,4 +1,5 @@
 const Category = require("../models/categories")
+const Product =require("../models/products")
 const config = require("../config/config.js")
 const logger = require('../logger/logger')
 
@@ -34,7 +35,7 @@ class userService {
 
 
     /**
-     * Categoryts
+     * Category list
      * @param {object} requestParams
      * @returns {object}
      * @author khushbuw
@@ -90,7 +91,7 @@ class userService {
             const id = catId
             const data = await Category.findOne({ _id: id })
             if (!data) {
-                return ({ error: config.userNotFound });
+                return ({ error: config.dataNotFound });
             }
             const categoryData = {
                 'id': data._id,
@@ -137,15 +138,20 @@ class userService {
         try {
             const data = await Category.findOne({ _id: catId })
             if (data) {
-                const deletedCategory = await Category.deleteOne({ _id: catId })
-                logger.info({ message: "Category deleted", info: deletedCategory });
-                return ({
-                    success: config.recordDeleted
-                });
+              const checkData = await Product.findOne({ country_id: data._id });
+              if (!checkData) {
+                await Country.deleteOne({ _id: catId });
+                return {
+                  success: config.recordDeleted,
+                };
+              }
+              return {
+                error: config.categoryAlreadyAssign,
+              };
             }
-            return ({
-                error: config.noData
-            });
+            return {
+              error: config.noData,
+            };
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
