@@ -19,6 +19,9 @@ const config = {
     emailPassword: "add your password",
     greetings: 'Hello ',
     categoryAlreadyAssign: "Category already assign",
+    userNotExists: "Given User is not exists",
+    userNotCustomer: "Given User is not customer",
+    recordUpdated: "password updated",
     dataNotFound: "Data not found"
 }
 module.exports=config;

@@ -81,6 +81,32 @@ class authController {
         }
     }
 
+     /**
+     * generate Password 
+     * @param {Request} req
+     * @param {JSON} res
+     * @returns
+     * @author khushbuw
+     */
+     static async generatePassword(req, res) {
+        try {
+            const requestParams = {
+                "password": req.body.password,
+                "cpassword": req.body.cpassword,
+            };
+            const id=req.params.id;
+            const data = await authService.generatePassword(id,requestParams);   
+            if (data.error) {
+                return res.status(config.successStatusCode).send(data);
+            }
+            return res.status(config.successStatusCode).send(data)
+        } catch (err) {
+            logger.error({ error_message: err.message });
+            return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
+        }
+    }
+
+
     /**
      * logout user
      * @param {Request} req
