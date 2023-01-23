@@ -85,3 +85,12 @@
 {"level":"error","message":{"error_message":"formatCategory is not defined"},"timestamp":"2023-01-23T06:35:40.748Z"}
 {"info":{"__v":0,"_id":"63ce2a59f687b6c0c46186b9","name":"Test1"},"level":"info","message":{"message":"Category updated"},"timestamp":"2023-01-23T06:38:21.288Z"}
 {"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"Category deleted","timestamp":"2023-01-23T06:39:23.862Z"}
+{"level":"error","message":{"error_message":"Product is not defined"},"timestamp":"2023-01-23T07:37:25.002Z"}
+{"level":"error","message":{"error_message":"products validation failed: description: Path `description` is required."},"timestamp":"2023-01-23T07:40:48.514Z"}
+{"info":{"__v":0,"_id":"63ce3a1dcc57304e4fb0b8ee","category_id":"63ce2a4435dab4e3f133197d","description":"Test","name":"TestProduct"},"level":"info","message":"product created","timestamp":"2023-01-23T07:41:17.425Z"}
+{"level":"error","message":{"error_message":"category is not defined"},"timestamp":"2023-01-23T07:41:22.041Z"}
+{"level":"error","message":{"error_message":"category is not defined"},"timestamp":"2023-01-23T07:42:19.877Z"}
+{"info":{"__v":0,"_id":"63ce3a1dcc57304e4fb0b8ee","category_id":"63ce2a4435dab4e3f133197d","description":"Test","name":"TestProduct"},"level":"info","message":{"message":"Product updated"},"timestamp":"2023-01-23T07:43:58.507Z"}
+{"info":{"__v":0,"_id":"63ce3acb20a619edda8bd21c","category_id":"63ce2a4435dab4e3f133197d","description":"Test","name":"TestProduct1"},"level":"info","message":"product created","timestamp":"2023-01-23T07:44:11.384Z"}
+{"level":"error","message":{"error_message":"catId is not defined"},"timestamp":"2023-01-23T07:44:23.744Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"Product deleted","timestamp":"2023-01-23T07:44:36.444Z"}

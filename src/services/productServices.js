@@ -1,30 +1,27 @@
 const Category = require("../models/categories")
+const Product = require("../models/products")
 const config = require("../config/config.js")
 const logger = require('../logger/logger')
 
-class categoryService {
+class productService {
     /**
-         * create Category
+         * create product
          * @param {object} requestParams
          * @returns {object}
          * @author khushbuw
          */
-    static async createCategory(userRole,requestParams) {
+    static async createProduct(requestParams) {
         try {
-            if ((userRole == 'Admin') || (userRole == 'admin')) {
             console.log(requestParams)
-                if (!(requestParams.name) ) {
+                if (!((requestParams.category_id) || (requestParams.name) || (requestParams.description) )) {
                     return ({ error: config.emptyFields });
                 }
-                const createdCategory = await Category.create(requestParams);
+                const createdProduct = await Product.create(requestParams);
                 
-                logger.info({ message: "Category created", info: createdCategory });
+                logger.info({ message: "product created", info: createdProduct});
                 return ({
                     success: config.recordCreated,
                 });
-            } else {
-                return ({ error: config.notAllowed });
-            }
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
@@ -34,12 +31,12 @@ class categoryService {
 
 
     /**
-     * Categoryts
+     * product
      * @param {object} requestParams
      * @returns {object}
      * @author khushbuw
      */
-    static async listCategory(requestQueries) {
+    static async listProduct(requestQueries) {
         try {
             var sortObject = {};
             const limit = requestQueries.limit
@@ -50,15 +47,16 @@ class categoryService {
             if (!key) {
                 key = ''
             }
-            var categoryData;
+            var productData;
             var orderBy;
             (sortingMethod === 'desc') ? orderBy = '-1' : orderBy = '1'
             var skip;
             (page <= 1) ? skip = 0 : skip = (page - 1) * limit
             sortObject[sort] = orderBy;
-            categoryData = await Category.find({
+            productData = await Product.find({
                 "$or": [
                     { "name": { $regex: key } },
+                    { "description": { $regex: key } },
                 ]
             })
                 .collation({ locale: "en" })
@@ -67,12 +65,12 @@ class categoryService {
                 .limit(limit)
                 .exec()
 
-            if (!categoryData) {
+            if (!productData) {
                 return ({ error: config.userNotFound });
             }
-            // call getCategoryData and get users data
-            var finalCategoryData = await formatCategory(categoryData)
-            return ({ data: finalCategoryData })
+            // call getProductData 
+            var finalProductData = await formatProduct(productData)
+            return ({ data: finalProductData })
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
@@ -80,23 +78,25 @@ class categoryService {
     }
 
     /**
-     * edit Category
+     * edit product
      * @param {object} requestParams
      * @returns {object}
      * @author khushbuw
      */
-    static async editCategory(catId) {
+    static async editProduct(catId) {
         try {
             const id = catId
-            const data = await Category.findOne({ _id: id })
+            const data = await Product.findOne({ _id: id })
             if (!data) {
                 return ({ error: config.userNotFound });
             }
-            const categoryData = {
+            const productData = {
                 'id': data._id,
                 'name': data.name,
+                'category_id':data.category_id,
+                'description':data.description,
             }
-            return ({ data: categoryData })
+            return ({ data: productData })
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
@@ -104,22 +104,22 @@ class categoryService {
     }
 
     /**
-     * update Category
+     * update product
      * @param {object} requestParams
      * @returns {object}
      * @author khushbuw
      */
-    static async updateCategory(id, requestParams) {
+    static async updateProduct(id, requestParams) {
         try {
             const updates = Object.keys(requestParams)
-            const allowedUpdates = ['name']
+            const allowedUpdates = ['category_id','name','description']
             const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
 
             if (!isValidOperation) {
                 return ({ error: config.invalidaUpdates })
             }
-            const updatedCategory = await Category.findByIdAndUpdate({ _id: id }, requestParams)
-            logger.info({ message: "Category updated" }, { info: updatedCategory });
+            const updatedProduct = await Product.findByIdAndUpdate({ _id: id }, requestParams)
+            logger.info({ message: "Product updated" }, { info: updatedProduct });
             return ({ success: config.recordUpdated })
         } catch (err) {
             logger.error({ error_message: err.message });
@@ -128,17 +128,17 @@ class categoryService {
     }
 
     /**
-     * delete Category
+     * delete product
      * @param {object} requestParams
      * @returns {object}
      * @author khushbuw
      */
-    static async deleteCategory(catId) {
+    static async deleteProduct(productId) {
         try {
-            const data = await Category.findOne({ _id: catId })
+            const data = await Product.findOne({ _id: productId })
             if (data) {
-                const deletedCategory = await Category.deleteOne({ _id: catId })
-                logger.info({ message: "Category deleted", info: deletedCategory });
+                const deletedProduct = await Product.deleteOne({ _id: productId })
+                logger.info({ message: "Product deleted", info: deletedProduct });
                 return ({
                     success: config.recordDeleted
                 });
@@ -156,20 +156,22 @@ class categoryService {
 }
 
 /**
-* format category data
+* format product data
 * @param {object} publisher 
 * @returns {object}
 * @author khushbuw
 */
-const formatCategory = async (category) => {
-    var categoryDataMap = category.map((category) => {
+const formatProduct = async (product) => {
+    var productDataMap = product.map((product) => {
         return {
-            'id': category._id,
-            'name': category.name,
+            'id': product._id,
+            'category_id':product.category_id,
+            'name': product.name,
+            'description':product.description,
         };
     })
-    return categoryDataMap;
+    return productDataMap;
 }
 
 
-module.exports = categoryService;
+module.exports = productService;

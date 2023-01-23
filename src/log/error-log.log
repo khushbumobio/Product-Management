@@ -58,3 +58,8 @@
 {"level":"error","message":{"error_message":"createdUser is not defined"},"timestamp":"2023-01-23T06:33:40.826Z"}
 {"level":"error","message":{"error_message":"categoryData is not defined"},"timestamp":"2023-01-23T06:34:39.744Z"}
 {"level":"error","message":{"error_message":"formatCategory is not defined"},"timestamp":"2023-01-23T06:35:40.747Z"}
+{"level":"error","message":{"error_message":"Product is not defined"},"timestamp":"2023-01-23T07:37:24.988Z"}
+{"level":"error","message":{"error_message":"products validation failed: description: Path `description` is required."},"timestamp":"2023-01-23T07:40:48.507Z"}
+{"level":"error","message":{"error_message":"category is not defined"},"timestamp":"2023-01-23T07:41:22.041Z"}
+{"level":"error","message":{"error_message":"category is not defined"},"timestamp":"2023-01-23T07:42:19.876Z"}
+{"level":"error","message":{"error_message":"catId is not defined"},"timestamp":"2023-01-23T07:44:23.744Z"}
