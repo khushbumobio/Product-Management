@@ -24,7 +24,8 @@ class userController {
                 "role": req.body.role,
                 "merchent_type": req.body.merchent_type,
             };
-            const data = await userService.createUser(userRole,requestParams);
+           const password=req.body.password;
+            const data = await userService.createUser(userRole,requestParams,password);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }

@@ -12,10 +12,9 @@ class userService {
          * @returns {object}
          * @author khushbuw
          */
-    static async createUser(userRole, requestParams) {
+    static async createUser(userRole, requestParams,password) {
         try {
             if ((userRole == 'Admin') || (userRole == 'admin')) {
-
                 if (!(requestParams.name || requestParams.email || requestParams.password || requestParams.phone_number || requestParams.address || requestParams.role || requestParams.merchent_type)) {
                     return ({ error: config.emptyFields });
                 }
@@ -23,13 +22,11 @@ class userService {
                 if (checkEmail) {
                     return ({ error: config.emailExists });
                 }
-                if((requestParams.role =='customer')||(requestParams.role =='Customer')){
-                    await sendMail(requestParams.name, requestParams.email, requestParams.password)
-                }
                 const createdUser = await User.create(requestParams);
-                // if((createdUser.role =='customer')||(createdUser.role =='Customer')){
-                //     await sendMail(createdUser.email, createdUser.password)
-                // }
+                if((createdUser.role =='customer')||(createdUser.role =='Customer')){
+                    await sendMail(requestParams.name,requestParams.email, password)
+                    logger.info("success: ", "email send")
+                }
                 logger.info({ message: "user created", info: createdUser });
                 return ({
                     success: config.recordCreated,

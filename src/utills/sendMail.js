@@ -12,23 +12,26 @@ const logger = require('../logger/logger')
  */
 const sendMail = async(name, email, password) => {
     try {
-        const transporter = nodemailer.createTransport({
-            host: "smtp.gmail.com",
-            port: 465,
-            secure: true,
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
             auth: {
-                user: email,
-                pass: password
-            },
-        });
-        await transporter.sendMail({
-            from: config.emailUser,
-            to: email,
-            subject: "Customer Authentication Details",
-            html: config.greetings + name + '<p>Welcome in Product Management System \n Your Email Id :' +
-            email + '\n Your password: ' + password  + '\n Thank You, \n Product Management SYstem</p>'
-        });
-        logger.info("success: ", "email send")
+              user: config.emailUser,
+              pass: config.emailPassword
+            }});
+            var mailOptions = {
+                from: 'khushbu.waghela@mobiosolutions.com',
+                to: email,
+                subject: 'credential',
+                html: config.greetings + name + '<p>Welcome to Product Management,\n your email :'+ email +'\n your password: '+password+' \n Thankyou</p>'      
+              };
+              transporter.sendMail(mailOptions, function(error, info){
+                if (error) {
+                  console.log(error);
+                } else {
+                    console.log(info);
+                }
+              });
+        
     } catch (error) {
         logger.error({ error_message: error.message });
         return ["error: ", error.message];
