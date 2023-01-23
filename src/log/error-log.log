@@ -47,3 +47,6 @@
 {"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials o1-20020a170902d4c100b0019320b4f832sm15888887plg.178 - gsmtp"},"timestamp":"2023-01-20T12:13:15.728Z"}
 {"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials s37-20020a63ff65000000b00478ca052819sm22708181pgk.47 - gsmtp"},"timestamp":"2023-01-20T12:15:09.901Z"}
 {"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials lj10-20020a17090b344a00b002272616d3e1sm5676556pjb.40 - gsmtp"},"timestamp":"2023-01-23T04:52:02.361Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:22:33.826Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:23:04.399Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:23:37.724Z"}

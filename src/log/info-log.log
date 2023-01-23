@@ -71,3 +71,6 @@
 {"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-23T04:51:55.290Z"}
 {"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials lj10-20020a17090b344a00b002272616d3e1sm5676556pjb.40 - gsmtp"},"timestamp":"2023-01-23T04:52:02.362Z"}
 {"info":{"__v":0,"_id":"63ce1272933246e88d0e2cc4","address":"vadodara","email":"khushbu.waghela@mobiosolutions.com","merchent_type":"large","name":"Khushbu","password":"$2b$10$9udV3oe2Si/rQqd0C.8fse0nXMeyMg6keGt4WBZcWsZVfnGSqOFpW","phone_number":9090909090,"role":"customer","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-23T04:52:02.440Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:22:33.827Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:23:04.400Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:23:37.724Z"}
