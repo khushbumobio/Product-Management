@@ -11,20 +11,20 @@ class userService {
          */
     static async createCategory(userRole,requestParams) {
         try {
-            // if ((userRole == 'Admin') || (userRole == 'admin')) {
-
+            if ((userRole == 'Admin') || (userRole == 'admin')) {
+            console.log(requestParams)
                 if (!(requestParams.name) ) {
                     return ({ error: config.emptyFields });
                 }
                 const createdCategory = await Category.create(requestParams);
                 
-                logger.info({ message: "Category created", info: createdUser });
+                logger.info({ message: "Category created", info: createdCategory });
                 return ({
                     success: config.recordCreated,
                 });
-            // } else {
-            //     return ({ error: config.notAllowed });
-            // }
+            } else {
+                return ({ error: config.notAllowed });
+            }
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
@@ -50,7 +50,7 @@ class userService {
             if (!key) {
                 key = ''
             }
-            var userData;
+            var categoryData;
             var orderBy;
             (sortingMethod === 'desc') ? orderBy = '-1' : orderBy = '1'
             var skip;
@@ -71,7 +71,7 @@ class userService {
                 return ({ error: config.userNotFound });
             }
             // call getCategoryData and get users data
-            var finalCategoryData = await formatCategory(userData)
+            var finalCategoryData = await formatCategory(categoryData)
             return ({ data: finalCategoryData })
         } catch (err) {
             logger.error({ error_message: err.message });
@@ -156,16 +156,16 @@ class userService {
 }
 
 /**
-* format user data
+* format category data
 * @param {object} publisher 
 * @returns {object}
 * @author khushbuw
 */
-const formatUser = async (user) => {
-    var userDataMap = user.map((user) => {
+const formatCategory = async (category) => {
+    var userDataMap = category.map((category) => {
         return {
-            'id': user._id,
-            'name': user.name,
+            'id': category._id,
+            'name': category.name,
         };
     })
     return userDataMap;

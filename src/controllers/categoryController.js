@@ -12,10 +12,12 @@ class categoryController {
      */
     static async createCategory(req, res) {
         try {
+            const userRole=req.user.role
             const requestParams = {
                 "name": req.body.name,
             };
-            const data = await categoryServices.createCategory(requestParams);
+            console.log(requestParams)
+            const data = await categoryServices.createCategory(userRole,requestParams);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }

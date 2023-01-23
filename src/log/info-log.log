@@ -74,3 +74,14 @@
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:22:33.827Z"}
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:23:04.400Z"}
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:23:37.724Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:28:59.109Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:30:15.678Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:31:17.657Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:31:33.408Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'name')"},"timestamp":"2023-01-23T06:31:59.234Z"}
+{"level":"error","message":{"error_message":"createdUser is not defined"},"timestamp":"2023-01-23T06:33:40.827Z"}
+{"info":{"__v":0,"_id":"63ce2a59f687b6c0c46186b9","name":"Test1"},"level":"info","message":"Category created","timestamp":"2023-01-23T06:34:01.667Z"}
+{"level":"error","message":{"error_message":"categoryData is not defined"},"timestamp":"2023-01-23T06:34:39.745Z"}
+{"level":"error","message":{"error_message":"formatCategory is not defined"},"timestamp":"2023-01-23T06:35:40.748Z"}
+{"info":{"__v":0,"_id":"63ce2a59f687b6c0c46186b9","name":"Test1"},"level":"info","message":{"message":"Category updated"},"timestamp":"2023-01-23T06:38:21.288Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"Category deleted","timestamp":"2023-01-23T06:39:23.862Z"}
