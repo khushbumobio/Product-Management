@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const config = require("../config/config.js")
 const jwt = require('jsonwebtoken');
 const logger = require('../logger/logger');
-const {generatePasswordMail}=require('../utills/generatePasswordMail')
+const {generatePasswordMail}=require('../utills/sendMail')
 class authService {
     /**
          * This will login in the user and return authentication token and user data
