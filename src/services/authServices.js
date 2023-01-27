@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const config = require("../config/config.js")
 const jwt = require('jsonwebtoken');
 const logger = require('../logger/logger');
-const generatePasswordMail=require('../utills/generatePasswordMail')
+const {generatePasswordMail}=require('../utills/generatePasswordMail')
 class authService {
     /**
          * This will login in the user and return authentication token and user data
@@ -117,7 +117,7 @@ class authService {
             }
         } catch (err) {
             logger.error({ error_message: err.message });
-            return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
+            return ({ error_message: err.message });
         }
     }
     

@@ -80,3 +80,21 @@
 {"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-23T12:47:27.419Z"}
 {"info":{"__v":0,"_id":"63ce81e32496fa3b6ebe0586","address":"vadodara","email":"khushbu.waghela@mobiosolutions.com","merchent_type":"large","name":"Khushbu","password":"$2b$10$.yUzn9xBmtMlnQe5Yydda.YrTFsqbgn6vV3d.ttquWE3pi2Vp8AzS","phone_number":9090909090,"role":"customer","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-23T12:47:31.343Z"}
 {"level":"info","message":"success: ","timestamp":"2023-01-23T12:47:34.929Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T09:49:11.143Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-27T09:49:11.144Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:01:35.667Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-27T10:01:35.667Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:04:33.882Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-27T10:04:33.882Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-27T10:05:14.084Z"}
+{"level":"info","message":"success: ","timestamp":"2023-01-27T10:05:29.848Z"}
+{"info":{"__v":0,"_id":"63d3a1e9c9bb90882a93c7d4","address":"vadodara","email":"khushbu.waghela@mobiosolutions.com","merchent_type":"large","name":"Khushbu","password":"$2b$10$qPSX4etHl7vOEPoBWI7R6ORtnJhxxhHnPMfGjLhbhJ6WHvSKR269q","phone_number":9090909090,"role":"customer","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-27T10:05:29.849Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:05:49.570Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-27T10:05:49.570Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:22:36.553Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:23:02.436Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:23:30.977Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:24:19.526Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:26:06.686Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:30:16.989Z"}
+{"info":{"__v":0,"_id":"63d3a1e9c9bb90882a93c7d4","address":"vadodara","email":"khushbu.waghela@mobiosolutions.com","merchent_type":"large","name":"Khushbu","password":"$2b$10$6XqwjD6341eZcMvwUmVOHO/.BPkULusNxDuo8HfbiRbKB4P8TkZ/W","phone_number":9090909090,"role":"customer","token":"0","tokensAuth":[]},"level":"info","message":{"message":"user password updated"},"timestamp":"2023-01-27T10:31:51.861Z"}
