@@ -94,3 +94,25 @@
 {"info":{"__v":0,"_id":"63ce3acb20a619edda8bd21c","category_id":"63ce2a4435dab4e3f133197d","description":"Test","name":"TestProduct1"},"level":"info","message":"product created","timestamp":"2023-01-23T07:44:11.384Z"}
 {"level":"error","message":{"error_message":"catId is not defined"},"timestamp":"2023-01-23T07:44:23.744Z"}
 {"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"Product deleted","timestamp":"2023-01-23T07:44:36.444Z"}
+{"info":{"__v":0,"_id":"63d36dffe570e7c089d58c03","category_id":"63ce2a4435dab4e3f133197d","description":"Test","name":"TestProduct12","qrCode":"async text =>{\n    try{\n        return await QRCode.toFile(\"src/image/\"+name+\".png\",text);\n    }catch(error){\n        console.log(error)\n    }\n}"},"level":"info","message":"product created","timestamp":"2023-01-27T06:23:59.417Z"}
+{"info":{"__v":0,"_id":"63d36e431956fa8aed1c7600","category_id":"63ce2a4435dab4e3f133197d","description":"Test","name":"TestProduct12","qrCode":"async (text) =>{\n    try{\n        return await QRCode.toFile(\"src/image/\"+text.name+\".png\",text);\n    }catch(error){\n        console.log(error)\n    }\n}"},"level":"info","message":"product created","timestamp":"2023-01-27T06:25:07.221Z"}
+{"info":{"__v":0,"_id":"63d36e626d5d2c178d624eba","category_id":"63ce2a4435dab4e3f133197d","description":"Test","name":"TestProduct12","qrCode":"async (text) =>{\n    try{\n        return await QRCode.toFile(\"src/image/\"+text.name+\".png\",text);\n    }catch(error){\n        console.log(error)\n    }\n}"},"level":"info","message":"product created","timestamp":"2023-01-27T06:25:38.995Z"}
+{"info":{"__v":0,"_id":"63d36e928d98b54bbbb992bb","category_id":"63ce2a4435dab4e3f133197d","description":"Test","name":"TestProduct12","qrCode":"async (text) =>{\n    try{\n        return await QRCode.toFile(\"src/image/\"+text.name+\".png\",text);\n    }catch(error){\n        console.log(error)\n    }\n}"},"level":"info","message":"product created","timestamp":"2023-01-27T06:26:26.347Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T06:31:05.492Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T06:31:34.392Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T06:32:10.268Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Path `qrCode` is required."},"timestamp":"2023-01-27T06:32:32.308Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Cast to string failed for value \"Promise { <pending> }\" (type Promise) at path \"qrCode\""},"timestamp":"2023-01-27T06:34:12.467Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:24:34.703Z"}
+{"level":"error","message":{"error_message":"QRCode is not defined"},"timestamp":"2023-01-27T09:24:34.704Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:25:02.815Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:25:24.875Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:25:34.044Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:26:00.999Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Path `qrCode` is required."},"timestamp":"2023-01-27T09:34:40.404Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Cast to string failed for value \"Promise { <pending> }\" (type Promise) at path \"qrCode\""},"timestamp":"2023-01-27T09:35:29.289Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Cast to string failed for value \"Promise { <pending> }\" (type Promise) at path \"qrCode\""},"timestamp":"2023-01-27T09:38:52.211Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Cast to string failed for value \"Promise { <pending> }\" (type Promise) at path \"qrCode\""},"timestamp":"2023-01-27T09:39:30.446Z"}
+{"level":"error","message":{"error_message":"Cannot access 'generateQR' before initialization"},"timestamp":"2023-01-27T09:40:21.945Z"}
+{"level":"error","message":{"error_message":"Cannot access 'generateQR' before initialization"},"timestamp":"2023-01-27T09:41:11.927Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:44:28.418Z"}

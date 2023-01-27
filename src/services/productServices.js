@@ -2,8 +2,11 @@ const Category = require("../models/categories")
 const Product = require("../models/products")
 const config = require("../config/config.js")
 const logger = require('../logger/logger')
+const QRCode = require('qrcode');
+
 
 class productService {
+    
     /**
          * create product
          * @param {object} requestParams
@@ -16,6 +19,9 @@ class productService {
                 if (!((requestParams.category_id) || (requestParams.name) || (requestParams.description) )) {
                     return ({ error: config.emptyFields });
                 }
+            //    const qrCode= await QRCode.toDataURL(requestParams)
+                  
+            //         requestParams.qrCode=qrCode;
                 const createdProduct = await Product.create(requestParams);
                 
                 logger.info({ message: "product created", info: createdProduct});
@@ -168,10 +174,18 @@ const formatProduct = async (product) => {
             'category_id':product.category_id,
             'name': product.name,
             'description':product.description,
+            "qrCode":product.qrCode
         };
     })
     return productDataMap;
 }
 
+// const generateQR = async (text) =>{
+//     try{
+//         return(await QRCode.toDataURL(text));
+//     }catch(error){
+//         console.log(error)
+//     }
+// }
 
 module.exports = productService;

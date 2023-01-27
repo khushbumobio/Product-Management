@@ -19,6 +19,7 @@ class productController {
             };
             console.log(requestParams)
             const data = await productServices.createProduct(requestParams);
+            
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }

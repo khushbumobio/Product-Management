@@ -63,3 +63,21 @@
 {"level":"error","message":{"error_message":"category is not defined"},"timestamp":"2023-01-23T07:41:22.041Z"}
 {"level":"error","message":{"error_message":"category is not defined"},"timestamp":"2023-01-23T07:42:19.876Z"}
 {"level":"error","message":{"error_message":"catId is not defined"},"timestamp":"2023-01-23T07:44:23.744Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T06:31:05.490Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T06:31:34.390Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T06:32:10.267Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Path `qrCode` is required."},"timestamp":"2023-01-27T06:32:32.307Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Cast to string failed for value \"Promise { <pending> }\" (type Promise) at path \"qrCode\""},"timestamp":"2023-01-27T06:34:12.465Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:24:34.702Z"}
+{"level":"error","message":{"error_message":"QRCode is not defined"},"timestamp":"2023-01-27T09:24:34.704Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:25:02.810Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:25:24.873Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:25:34.043Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:26:00.998Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Path `qrCode` is required."},"timestamp":"2023-01-27T09:34:40.402Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Cast to string failed for value \"Promise { <pending> }\" (type Promise) at path \"qrCode\""},"timestamp":"2023-01-27T09:35:29.287Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Cast to string failed for value \"Promise { <pending> }\" (type Promise) at path \"qrCode\""},"timestamp":"2023-01-27T09:38:52.209Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Cast to string failed for value \"Promise { <pending> }\" (type Promise) at path \"qrCode\""},"timestamp":"2023-01-27T09:39:30.442Z"}
+{"level":"error","message":{"error_message":"Cannot access 'generateQR' before initialization"},"timestamp":"2023-01-27T09:40:21.942Z"}
+{"level":"error","message":{"error_message":"Cannot access 'generateQR' before initialization"},"timestamp":"2023-01-27T09:41:11.925Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:44:28.416Z"}
