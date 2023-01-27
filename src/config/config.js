@@ -17,7 +17,7 @@ const config = {
     logOut: "Logout successful",
     userNotExists: "Given User is not exists",
     userNotCustomer: "Given User is not customer",
-    recordUpdated: "password updated",
+    passwordUpdated: "password updated",
 
 }
 module.exports=config;

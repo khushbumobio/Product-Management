@@ -103,7 +103,7 @@ class authService {
             if ((user.role == 'customer') || (user.role == 'Customer')) {
                 const updatedUser = await User.findByIdAndUpdate({ _id: id }, requestParams)
                 logger.info({ message: "user password updated" }, { info: updatedUser });
-                return ({ success: config.recordUpdated })
+                return ({ success: config.passwordUpdated })
             } else {
                 return { error: config.userNotCustomer }
             }
