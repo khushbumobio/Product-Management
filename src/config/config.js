@@ -21,5 +21,6 @@ const config = {
     userNotExists: "Given User is not exists",
     userNotCustomer: "Given User is not customer",
     recordUpdated: "password updated",
+    matchPassword: "password not matched with confirm password"
 }
 module.exports=config;

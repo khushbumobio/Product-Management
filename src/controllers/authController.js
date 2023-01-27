@@ -96,7 +96,7 @@ class authController {
                 "cpassword": req.body.cpassword,
             };
             const id=req.params.id;
-            const data = await authService.generatePassword(id,requestParams);   
+            const data = await authService.generatePassword(id,requestParams);  
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }

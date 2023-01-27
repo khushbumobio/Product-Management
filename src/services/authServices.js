@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const config = require("../config/config.js")
 const jwt = require('jsonwebtoken');
 const logger = require('../logger/logger');
-
+const generatePasswordMail=require('../utills/generatePasswordMail')
 class authService {
     /**
          * This will login in the user and return authentication token and user data
@@ -96,12 +96,20 @@ class authService {
      */
     static async generatePassword(id, requestParams) {
         try {
+            if(requestParams.password == '' || requestParams.cpassword == ''){
+                return {error:config.emptyFields}
+            }
+            if(requestParams.password !== requestParams.cpassword){
+                return {error: config.matchPassword}
+            }
             const user = await User.findOne({ _id:id })
             if (!user) {
                 return { error: config.userNotExists }
             }
             if ((user.role == 'customer') || (user.role == 'Customer')) {
-                const updatedUser = await User.findByIdAndUpdate({ _id: id }, requestParams)
+                const newPassword = await bcrypt.hash(requestParams.password, 10)
+                const updatedUser = await User.findByIdAndUpdate({ _id: id }, { $set: { password: newPassword } }, { new: true })
+                await generatePasswordMail(user.name,user.email,requestParams.password)
                 logger.info({ message: "user password updated" }, { info: updatedUser });
                 return ({ success: config.recordUpdated })
             } else {
