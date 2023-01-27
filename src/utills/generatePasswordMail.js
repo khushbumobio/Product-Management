@@ -12,6 +12,7 @@ const logger = require('../logger/logger')
  */
 const generatePasswordMail = async(name, email, password) => {
     try {
+      console.log(name)
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
