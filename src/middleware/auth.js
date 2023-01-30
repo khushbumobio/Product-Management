@@ -4,11 +4,9 @@ const config = require("../config/config.js")
 
 const auth = async(req, res, next) => {
     try {
-        // const authToken = req.header('Authorization').replace('Bearer ', '');
         const authToken = req.header('Authorization');
 
         const decoded = jwt.verify(authToken, config.secretJWT);
-
         const user = await User.findOne({
             _id: decoded._id,
             'tokensAuth.token': authToken,

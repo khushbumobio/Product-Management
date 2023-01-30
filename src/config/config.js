@@ -15,9 +15,12 @@ const config = {
     recordUpdated: "Record has been updated.",
     recordDeleted: "Record has been deleted.",
     logOut: "Logout successful",
+    emailUser: "khushbu.waghela@mobiosolutions.com",
+    emailPassword: "leyhzrygridlgtel",
+    greetings: 'Hello ',
     userNotExists: "Given User is not exists",
     userNotCustomer: "Given User is not customer",
-    passwordUpdated: "password updated",
-
+    recordUpdated: "password updated",
+    matchPassword: "password not matched with confirm password"
 }
 module.exports=config;

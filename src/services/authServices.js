@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const config = require("../config/config.js")
 const jwt = require('jsonwebtoken');
 const logger = require('../logger/logger');
+const {generatePasswordMail}=require("../utills/sendMail")
 
 class authService {
     /**
@@ -13,7 +14,6 @@ class authService {
          */
     static async login(requestParams) {
         try {
-            // return (requestParams.email )
             if (!(requestParams.email || requestParams.password)) {
                 return { error: config.emptyFields }
             }
@@ -96,20 +96,28 @@ class authService {
      */
     static async generatePassword(id, requestParams) {
         try {
+            if(requestParams.password == '' || requestParams.cpassword == ''){
+                return {error:config.emptyFields}
+            }
+            if(requestParams.password !== requestParams.cpassword){
+                return {error: config.matchPassword}
+            }
             const user = await User.findOne({ _id:id })
             if (!user) {
                 return { error: config.userNotExists }
             }
             if ((user.role == 'customer') || (user.role == 'Customer')) {
-                const updatedUser = await User.findByIdAndUpdate({ _id: id }, requestParams)
+                const newPassword = await bcrypt.hash(requestParams.password, 10)
+                const updatedUser = await User.findByIdAndUpdate({ _id: id }, { $set: { password: newPassword } }, { new: true })
+                await generatePasswordMail(user.name,user.email,requestParams.password)
                 logger.info({ message: "user password updated" }, { info: updatedUser });
-                return ({ success: config.passwordUpdated })
+                return ({ success: config.recordUpdated })
             } else {
                 return { error: config.userNotCustomer }
             }
         } catch (err) {
             logger.error({ error_message: err.message });
-            return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
+            return ({ error_message: err.message });
         }
     }
 
