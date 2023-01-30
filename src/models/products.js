@@ -28,6 +28,11 @@ const productSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    createdBy:{
+        type: String,
+        required: true,
+        trim: true,
+    }
 })
 
 module.exports = mongoose.model('products', productSchema);

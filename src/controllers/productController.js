@@ -16,6 +16,7 @@ class productController {
                 "category_id": req.body.category_id,
                 "name": req.body.name,
                 "description":req.body.description,
+                "createdBy":req.user._id
             };
             console.log(requestParams)
             const data = await productServices.createProduct(requestParams);
@@ -93,6 +94,7 @@ class productController {
                 "category_id": req.body.category_id,
                 "name": req.body.name,
                 "description":req.body.description,
+                "createdBy":req.user._id
             };
             const id = req.params.id
             const data = await productServices.updateProduct(id, requestParams);

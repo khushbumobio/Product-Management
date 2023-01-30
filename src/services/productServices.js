@@ -4,6 +4,8 @@ const config = require("../config/config.js")
 const logger = require('../logger/logger')
 const QRCode = require('qrcode');
 const { json } = require("body-parser");
+var fs = require('fs');
+
 
 
 class productService {
@@ -111,6 +113,8 @@ class productService {
                 'name': data.name,
                 'category_id':data.category_id,
                 'description':data.description,
+                'qrCode':data.qrCode,
+                'createdBy':data.createdBy
             }
             return ({ data: productData })
         } catch (err) {
@@ -127,13 +131,29 @@ class productService {
      */
     static async updateProduct(id, requestParams) {
         try {
-            const updates = Object.keys(requestParams)
-            const allowedUpdates = ['category_id','name','description']
-            const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
+            // const updates = Object.keys(requestParams)
+            // const allowedUpdates = ['name','category_id','description']
+            // const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
 
-            if (!isValidOperation) {
-                return ({ error: config.invalidaUpdates })
+            // if (!isValidOperation) {
+            //     return ({ error: config.invalidProductUpdates })
+            // }
+            let data ={
+                "name":requestParams.name,
+                "category_id":requestParams.category_id,
+                "description":requestParams.description,
             }
+            let stringdata = JSON.stringify(data)
+            let path='src/images/'+requestParams.name+Date.now()
+            +'.png'
+            QRCode.toFile(path,stringdata,(err)=>{
+                    if(err) throw err;
+                })
+
+            let oldQr=await Product.findOne({ _id: id })
+            fs.unlinkSync(oldQr.qrCode);
+
+            requestParams.qrCode=path
             const updatedProduct = await Product.findByIdAndUpdate({ _id: id }, requestParams)
             logger.info({ message: "Product updated" }, { info: updatedProduct });
             return ({ success: config.recordUpdated })
@@ -184,7 +204,8 @@ const formatProduct = async (product) => {
             'category_id':product.category_id,
             'name': product.name,
             'description':product.description,
-            "qrCode":product.qrCode
+            "qrCode":product.qrCode,
+            'createdBy':product.createdBy
         };
     })
     return productDataMap;

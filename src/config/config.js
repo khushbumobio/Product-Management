@@ -21,7 +21,9 @@ const config = {
     categoryAlreadyAssign: "Category already assign",
     userNotExists: "Given User is not exists",
     userNotCustomer: "Given User is not customer",
-    recordUpdated: "password updated",
-    dataNotFound: "Data not found"
+    passwordUpdated: "password updated",
+    dataNotFound: "Data not found",
+    invalidProductUpdates: "Invalid Updates",
+
 }
 module.exports=config;
