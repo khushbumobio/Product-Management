@@ -81,3 +81,14 @@
 {"level":"error","message":{"error_message":"Cannot access 'generateQR' before initialization"},"timestamp":"2023-01-27T09:40:21.942Z"}
 {"level":"error","message":{"error_message":"Cannot access 'generateQR' before initialization"},"timestamp":"2023-01-27T09:41:11.925Z"}
 {"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-27T09:44:28.416Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:41:38.926Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-30T04:41:38.927Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:42:43.396Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-30T04:49:44.794Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-30T04:50:15.332Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-30T04:51:31.062Z"}
+{"level":"error","message":{"error_message":"Invalid argument"},"timestamp":"2023-01-30T05:07:38.929Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Path `qrCode` is required."},"timestamp":"2023-01-30T05:15:32.036Z"}
+{"level":"error","message":{"error_message":"products validation failed: qrCode: Path `qrCode` is required."},"timestamp":"2023-01-30T05:23:55.572Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-30T05:26:14.011Z"}
+{"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-30T05:27:41.000Z"}

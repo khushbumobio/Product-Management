@@ -109,7 +109,7 @@ class authService {
             }
         } catch (err) {
             logger.error({ error_message: err.message });
-            return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
+            return ({ error_message: err.message });
         }
     }
 
