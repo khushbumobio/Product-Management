@@ -93,3 +93,7 @@
 {"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-30T05:26:14.011Z"}
 {"level":"error","message":{"error_message":"Invalid data"},"timestamp":"2023-01-30T05:27:41.000Z"}
 {"level":"error","message":{"error_message":"The \"path\" argument must be of type string or an instance of Buffer or URL. Received undefined"},"timestamp":"2023-01-30T06:47:13.520Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T06:04:40.491Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of null (reading 'qrCode')"},"timestamp":"2023-01-31T06:08:21.723Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'qrCode')"},"timestamp":"2023-01-31T06:12:07.846Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'qrCode')"},"timestamp":"2023-01-31T06:12:12.474Z"}

@@ -24,6 +24,6 @@ const config = {
     passwordUpdated: "password updated",
     dataNotFound: "Data not found",
     invalidProductUpdates: "Invalid Updates",
-
+    notAllow: "You are not allow to update product"
 }
 module.exports=config;

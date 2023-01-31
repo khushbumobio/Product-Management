@@ -129,34 +129,33 @@ class productService {
      * @returns {object}
      * @author khushbuw
      */
-    static async updateProduct(id, requestParams) {
+    static async updateProduct(id, requestParams,userId) {
         try {
-            // const updates = Object.keys(requestParams)
-            // const allowedUpdates = ['name','category_id','description']
-            // const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
+                const updates = Object.keys(requestParams)
+                const allowedUpdates = ['name','category_id','description']
+                const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
 
-            // if (!isValidOperation) {
-            //     return ({ error: config.invalidProductUpdates })
-            // }
-            let data ={
-                "name":requestParams.name,
-                "category_id":requestParams.category_id,
-                "description":requestParams.description,
-            }
-            let stringdata = JSON.stringify(data)
-            let path='src/images/'+requestParams.name+Date.now()
-            +'.png'
-            QRCode.toFile(path,stringdata,(err)=>{
-                    if(err) throw err;
-                })
-
-            let oldQr=await Product.findOne({ _id: id })
-            fs.unlinkSync(oldQr.qrCode);
-
-            requestParams.qrCode=path
-            const updatedProduct = await Product.findByIdAndUpdate({ _id: id }, requestParams)
-            logger.info({ message: "Product updated" }, { info: updatedProduct });
-            return ({ success: config.recordUpdated })
+                if (!isValidOperation) {
+                    return ({ error: config.invalidProductUpdates })
+                }
+                let data ={
+                    "name":requestParams.name,
+                    "category_id":requestParams.category_id,
+                    "description":requestParams.description,
+                }
+                let stringdata = JSON.stringify(data)
+                let path='src/images/'+requestParams.name+Date.now()
+                +'.png'
+                QRCode.toFile(path,stringdata,(err)=>{
+                        if(err) throw err;
+                    })
+    
+                requestParams.qrCode=path
+                const updatedProduct = await Product.findByIdAndUpdate({ _id: id }, requestParams)
+                logger.info({ message: "Product updated" }, { info: updatedProduct });
+                return ({ success: config.recordUpdated })
+            
+            
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });

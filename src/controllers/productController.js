@@ -90,14 +90,14 @@ class productController {
      */
      static async updateProduct(req, res) {
         try {
+            const userId=req.user
             const requestParams = {
                 "category_id": req.body.category_id,
                 "name": req.body.name,
                 "description":req.body.description,
-                "createdBy":req.user._id
             };
             const id = req.params.id
-            const data = await productServices.updateProduct(id, requestParams);
+            const data = await productServices.updateProduct(id, requestParams,userId);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
