@@ -68,3 +68,4 @@
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:50:19.768Z"}
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:52:12.428Z"}
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:52:30.861Z"}
+{"level":"error","message":{"error_message":"Country is not defined"},"timestamp":"2023-02-01T08:11:50.014Z"}

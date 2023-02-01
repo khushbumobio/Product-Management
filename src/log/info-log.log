@@ -116,3 +116,7 @@
 {"info":{"__v":0,"_id":"63da1a8db56ac7855b1d6029","address":"vadodara","email":"test@gmail.com","merchent_type":"large","name":"test","password":"$2b$10$mwihrFvuyc4kEPbVVA/E2Ou441pd.L8bWbXmEKzBNsZZtUB5ELx8m","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-02-01T07:53:49.851Z"}
 {"info":{"__v":0,"_id":"63da1a8db56ac7855b1d6029","address":"vadodara","email":"test@gmail.com","merchent_type":"large","name":"test","password":"$2b$10$mwihrFvuyc4kEPbVVA/E2Ou441pd.L8bWbXmEKzBNsZZtUB5ELx8m","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":{"message":"user updated"},"timestamp":"2023-02-01T07:56:18.902Z"}
 {"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-02-01T07:56:39.668Z"}
+{"info":{"__v":0,"_id":"63da1e799e03b386ffab7a7e","name":"Test14"},"level":"info","message":"Category created","timestamp":"2023-02-01T08:10:33.948Z"}
+{"info":null,"level":"info","message":{"message":"Category updated"},"timestamp":"2023-02-01T08:11:19.159Z"}
+{"info":{"__v":0,"_id":"63da1e799e03b386ffab7a7e","name":"Test14"},"level":"info","message":{"message":"Category updated"},"timestamp":"2023-02-01T08:11:38.000Z"}
+{"level":"error","message":{"error_message":"Country is not defined"},"timestamp":"2023-02-01T08:11:50.014Z"}
