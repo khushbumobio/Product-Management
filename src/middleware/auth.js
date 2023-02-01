@@ -7,16 +7,17 @@ const auth = async(req, res, next) => {
         const authToken = req.header('Authorization');
 
         const decoded = jwt.verify(authToken, config.secretJWT);
-
         const user = await User.findOne({
             _id: decoded._id,
             'tokensAuth.token': authToken,
         });
+        // console.log(user)
         if (!user) {
             return res.status(401).send({
                 error_message: 'Access Denied',
             });
         }
+        
         req.user = user;
         next();
     } catch (err) {

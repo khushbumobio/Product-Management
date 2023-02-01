@@ -69,8 +69,9 @@ class productController {
      */
     static async editProduct(req, res) {
         try {
-            const catId = req.params.id;
-            const data = await productServices.editProduct(catId);
+            const productId = req.params.id;
+            const userId=req.user
+            const data = await productServices.editProduct(productId,userId);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }

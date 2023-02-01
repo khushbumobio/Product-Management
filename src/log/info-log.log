@@ -167,3 +167,46 @@
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'qrCode')"},"timestamp":"2023-01-31T06:12:07.847Z"}
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'qrCode')"},"timestamp":"2023-01-31T06:12:12.475Z"}
 {"info":{"__v":0,"_id":"63d767677302d0a7553590e7","category_id":"63ce2a4435dab4e3f133197d","createdBy":"63d3a1e9c9bb90882a93c7d4","description":"Test","name":"TestNew","qrCode":"src/images/TestNew1675145446606.png"},"level":"info","message":{"message":"Product updated"},"timestamp":"2023-01-31T06:12:44.784Z"}
+{"info":{"__v":0,"_id":"63d8b9308201934eeab11be9","address":"vadodara","email":"khush.vk6995@gmail.com","merchent_type":"large","name":"Khushbu","password":"$2b$10$CUIo6ZOyO/4kman0s21freuu0kSQiLGGc9PyBjBEZf3qIVOfpA5vi","phone_number":9090909090,"role":"admin","token":"0","tokensAuth":[]},"level":"info","message":"user created","timestamp":"2023-01-31T06:46:08.658Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-31T06:46:33.331Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-31T06:46:46.680Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-31T06:57:53.891Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-31T10:37:51.686Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-31T10:38:08.060Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-31T10:38:20.559Z"}
+{"info":{"acknowledged":true,"deletedCount":1},"level":"info","message":"user deleted","timestamp":"2023-01-31T10:38:32.739Z"}
+{"info":{"__v":0,"_id":"63d9020dd1822d3d9764e4f4","category_id":"63ce2a4435dab4e3f133197d","createdBy":"63d8b9308201934eeab11be9","description":"Test","name":"AdminTest","qrCode":"src/images/AdminTest1675166221560.png"},"level":"info","message":"product created","timestamp":"2023-01-31T11:57:01.721Z"}
+{"info":{"__v":0,"_id":"63d767677302d0a7553590e7","category_id":"63ce2a4435dab4e3f133197d","createdBy":"63d3a1e9c9bb90882a93c7d4","description":"Test","name":"Test","qrCode":"src/images/Test1675145564671.png"},"level":"info","message":{"message":"Product updated"},"timestamp":"2023-01-31T11:57:53.278Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T11:58:35.353Z"}
+{"info":{"__v":0,"_id":"63d767677302d0a7553590e7","category_id":"63ce2a4435dab4e3f133197d","createdBy":"63d3a1e9c9bb90882a93c7d4","description":"Test","name":"Testt","qrCode":"src/images/Testt1675166273178.png"},"level":"info","message":{"message":"Product updated"},"timestamp":"2023-01-31T11:59:37.092Z"}
+{"level":"error","message":{"error_message":"Cannot access 'id' before initialization"},"timestamp":"2023-01-31T12:02:54.356Z"}
+{"level":"error","message":{"error_message":"Cannot access 'id' before initialization"},"timestamp":"2023-01-31T12:03:15.149Z"}
+{"level":"error","message":{"error_message":"Cannot access 'id' before initialization"},"timestamp":"2023-01-31T12:03:18.624Z"}
+{"level":"error","message":{"error_message":"Cannot access 'id' before initialization"},"timestamp":"2023-01-31T12:03:19.159Z"}
+{"level":"error","message":{"error_message":"Cannot access 'id' before initialization"},"timestamp":"2023-01-31T12:03:39.552Z"}
+{"level":"error","message":{"error_message":"userId is not defined"},"timestamp":"2023-01-31T12:04:26.624Z"}
+{"level":"error","message":{"error_message":"data is not defined"},"timestamp":"2023-01-31T12:13:23.026Z"}
+{"info":{"__v":0,"_id":"63d767677302d0a7553590e7","category_id":"63ce2a4435dab4e3f133197d","createdBy":"63d3a1e9c9bb90882a93c7d4","description":"Test","name":"Test","qrCode":"src/images/Test1675166377016.png"},"level":"info","message":{"message":"Product updated"},"timestamp":"2023-01-31T12:13:40.239Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:44:01.114Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:44:25.575Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:44:28.468Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:44:55.311Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:45:14.238Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:45:27.630Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:46:06.200Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:46:25.598Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:48:16.126Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:48:23.266Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:49:01.664Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:49:14.920Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:50:45.015Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-31T12:59:11.847Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T04:22:10.322Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T04:28:11.941Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T04:28:30.979Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T05:05:48.080Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T05:06:57.625Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T05:07:32.042Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T05:08:22.660Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T05:08:40.275Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-02-01T05:09:11.195Z"}
