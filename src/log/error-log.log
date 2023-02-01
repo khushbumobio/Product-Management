@@ -2,37 +2,69 @@
 {"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:30:45.008Z"}
 {"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:32:36.607Z"}
 {"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:33:35.570Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:10:20.781Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:10:56.657Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:11:38.072Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:12:28.442Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:13:04.963Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:13:16.498Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:14:06.200Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:15:28.893Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:16:33.471Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:17:36.179Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:18:40.379Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:19:59.623Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:21:01.459Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:22:47.282Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:23:40.171Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:23:54.802Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:24:26.644Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:25:00.033Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:25:17.008Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:25:41.343Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:25:53.064Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:27:01.143Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T12:36:08.257Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:30:16.870Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:32:07.192Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:32:09.180Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:32:49.489Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:33:53.517Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:34:09.997Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:35:59.859Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:36:36.232Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:37:43.286Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:37:57.625Z"}
-{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:38:27.175Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:12:01.213Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:13:11.819Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:13:25.773Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:13:41.830Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:13:44.339Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:14:13.299Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:14:43.636Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:14:46.104Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:15:42.839Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:16:38.697Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T07:17:03.080Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:57:27.867Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:57:44.474Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:58:00.806Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:58:08.022Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:58:52.927Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T09:58:59.920Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:00:03.528Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:41:05.150Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:41:38.195Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:41:42.032Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:42:46.754Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:42:50.630Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:43:50.812Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:44:28.466Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:44:44.785Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:44:47.426Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T10:45:20.156Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T11:17:03.537Z"}
+{"level":"error","message":{"error_message":"admin is not defined"},"timestamp":"2023-01-20T11:19:10.525Z"}
+{"level":"error","message":{"error_message":"sendMail is not defined"},"timestamp":"2023-01-20T11:54:43.816Z"}
+{"level":"error","message":{"error_message":"sendMail is not a function"},"timestamp":"2023-01-20T11:56:43.498Z"}
+{"level":"error","message":{"error_message":"sendMail is not a function"},"timestamp":"2023-01-20T11:57:37.516Z"}
+{"level":"error","message":{"error_message":"sendMail is not a function"},"timestamp":"2023-01-20T11:59:20.107Z"}
+{"level":"error","message":{"error_message":"sendMail is not a function"},"timestamp":"2023-01-20T11:59:32.865Z"}
+{"level":"error","message":{"error_message":"sendMail is not a function"},"timestamp":"2023-01-20T12:00:04.286Z"}
+{"level":"error","message":{"error_message":"logger is not defined"},"timestamp":"2023-01-20T12:01:08.045Z"}
+{"level":"error","message":{"error_message":"logger is not defined"},"timestamp":"2023-01-20T12:02:22.458Z"}
+{"level":"error","message":{"error_message":"logger is not defined"},"timestamp":"2023-01-20T12:07:03.539Z"}
+{"level":"error","message":{"error_message":"password is not defined"},"timestamp":"2023-01-20T12:07:52.202Z"}
+{"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials j18-20020a635952000000b004cd1f1a14f6sm8504216pgm.86 - gsmtp"},"timestamp":"2023-01-20T12:10:16.510Z"}
+{"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials k7-20020a170902ce0700b001929827731esm26716544plg.201 - gsmtp"},"timestamp":"2023-01-20T12:11:35.929Z"}
+{"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials o1-20020a170902d4c100b0019320b4f832sm15888887plg.178 - gsmtp"},"timestamp":"2023-01-20T12:13:15.728Z"}
+{"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials s37-20020a63ff65000000b00478ca052819sm22708181pgk.47 - gsmtp"},"timestamp":"2023-01-20T12:15:09.901Z"}
+{"level":"error","message":{"error_message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials lj10-20020a17090b344a00b002272616d3e1sm5676556pjb.40 - gsmtp"},"timestamp":"2023-01-23T04:52:02.361Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T09:49:11.142Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-27T09:49:11.143Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:01:35.665Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-27T10:01:35.667Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:04:33.881Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-27T10:04:33.882Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:05:49.569Z"}
+{"level":"error","message":{"error_message":"res is not defined"},"timestamp":"2023-01-27T10:05:49.570Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:22:36.552Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:23:02.435Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:23:30.976Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:24:19.525Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:26:06.684Z"}
+{"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:30:16.987Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:47:41.678Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-01T07:47:58.083Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:48:30.505Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:49:25.410Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:50:19.768Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:52:12.428Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:52:30.861Z"}

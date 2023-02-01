@@ -20,7 +20,8 @@ const config = {
     greetings: 'Hello ',
     userNotExists: "Given User is not exists",
     userNotCustomer: "Given User is not customer",
-    recordUpdated: "password updated",
-    matchPassword: "password not matched with confirm password"
+    recordPasswordUpdated: "password updated",
+    matchPassword: "password not matched with confirm password",
+    notAllowed:"you are not allowed to update record"
 }
 module.exports=config;

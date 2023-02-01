@@ -16,7 +16,6 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 
-// app.use(indexRoutes)
 require('./routes/indexRoutes')(app)
 
 app.get("/new", (req, res) => {

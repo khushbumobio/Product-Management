@@ -108,6 +108,63 @@ class authController {
 
 
     /**
+     * update profile 
+     * @param {Request} req
+     * @param {JSON} res
+     * @returns
+     * @author khushbuw
+     */
+    static async updateProfile(req, res) {
+        try {
+            const requestParams = {
+                "name": req.body.name,
+                "phone_number": req.body.phone_number,
+                "address": req.body.address,
+                "role": req.body.role,
+                "merchent_type": req.body.merchent_type,
+            };
+            const id = req.user._id
+            const data = await authService.updateProfile(id, requestParams);
+            if (data.error) {
+                return res.status(config.successStatusCode).send(data);
+            }
+            return res.status(config.successStatusCode).send(data)
+        } catch (err) {
+            logger.error({ error_message: err.message });
+            return res.status(config.internalServerErrorStatusCode).send({
+                error_message: err.message
+            });
+        }
+    }
+
+
+    /**
+     * generate Password 
+     * @param {Request} req
+     * @param {JSON} res
+     * @returns
+     * @author khushbuw
+     */
+    static async generatePassword(req, res) {
+        try {
+            const requestParams = {
+                "password": req.body.password,
+                "cpassword": req.body.cpassword,
+            };
+            const id=req.params.id;
+            const data = await authService.generatePassword(id,requestParams);  
+            if (data.error) {
+                return res.status(config.successStatusCode).send(data);
+            }
+            return res.status(config.successStatusCode).send(data)
+        } catch (err) {
+            logger.error({ error_message: err.message });
+            return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
+        }
+    }
+
+
+    /**
      * logout user
      * @param {Request} req
      * @param {JSON} res
