@@ -16,9 +16,10 @@ class productController {
                 "category_id": req.body.category_id,
                 "name": req.body.name,
                 "description":req.body.description,
+                "createdBy":req.user._id
             };
-            console.log(requestParams)
-            const data = await productServices.createProduct(requestParams);
+            const user=req.user
+            const data = await productServices.createProduct(requestParams,user);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -67,8 +68,9 @@ class productController {
      */
     static async editProduct(req, res) {
         try {
-            const catId = req.params.id;
-            const data = await productServices.editProduct(catId);
+            const productId = req.params.id;
+            const userId=req.user
+            const data = await productServices.editProduct(productId,userId);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -94,7 +96,8 @@ class productController {
                 "description":req.body.description,
             };
             const id = req.params.id
-            const data = await productServices.updateProduct(id, requestParams);
+            const userId=req.user
+            const data = await productServices.updateProduct(id, requestParams,userId);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -115,7 +118,8 @@ class productController {
     static async deleteProduct(req, res) {
         try {
             const productId = req.params.id;
-            const data = await productServices.deleteProduct(productId);
+            const userId=req.user
+            const data = await productServices.deleteProduct(productId,userId);
             if (data.error) {
                  return res.status(config.successStatusCode).send(data);
             }

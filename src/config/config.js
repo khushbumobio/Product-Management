@@ -26,5 +26,9 @@ const config = {
     notAllowedCreate:"you are not allowed to create record",
     dataNotFound:"No data found",
     categoryAlreadyAssign: "Category already assign",
+    invalidProductUpdates: "Invalid Updates",
+    notAllow: "You are not allow to update product",
+    noAllowDelete:"You are not allow to delete product",
+
 }
 module.exports=config;

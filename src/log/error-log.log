@@ -71,3 +71,10 @@
 {"level":"error","message":{"error_message":"Country is not defined"},"timestamp":"2023-02-01T08:11:50.014Z"}
 {"level":"error","message":{"error_message":"userId is not defined"},"timestamp":"2023-02-01T08:28:37.957Z"}
 {"level":"error","message":{"error_message":"Cannot read properties of null (reading 'createdBy')"},"timestamp":"2023-02-01T08:29:35.094Z"}
+{"level":"error","message":{"error_message":"products validation failed: createdBy: Path `createdBy` is required."},"timestamp":"2023-02-01T08:42:07.171Z"}
+{"level":"error","message":{"error_message":"productId is not defined"},"timestamp":"2023-02-01T08:44:16.668Z"}
+{"level":"error","message":{"error_message":"productId is not defined"},"timestamp":"2023-02-01T08:44:49.362Z"}
+{"level":"error","message":{"error_message":"productId is not defined"},"timestamp":"2023-02-01T08:44:52.655Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of null (reading 'createdBy')"},"timestamp":"2023-02-01T08:53:28.312Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of null (reading 'createdBy')"},"timestamp":"2023-02-01T08:53:54.607Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of null (reading 'createdBy')"},"timestamp":"2023-02-01T09:59:03.383Z"}
