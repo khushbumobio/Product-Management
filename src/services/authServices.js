@@ -94,7 +94,7 @@ class authService {
      * @returns
      * @author khushbuw
      */
-    static async generatePassword(id, requestParams) {
+    static async generatePassword(id, requestParams,user) {
         try {
             if(requestParams.password == '' || requestParams.cpassword == ''){
                 return {error:config.emptyFields}
@@ -102,19 +102,19 @@ class authService {
             if(requestParams.password !== requestParams.cpassword){
                 return {error: config.matchPassword}
             }
-            const user = await User.findOne({ _id:id })
-            if (!user) {
-                return { error: config.userNotExists }
-            }
-            if ((user.role == 'customer') || (user.role == 'Customer')) {
-                const newPassword = await bcrypt.hash(requestParams.password, 10)
-                const updatedUser = await User.findByIdAndUpdate({ _id: id }, { $set: { password: newPassword } }, { new: true })
-                await generatePasswordMail(user.name,user.email,requestParams.password)
-                logger.info({ message: "user password updated" }, { info: updatedUser });
-                return ({ success: config.recordUpdated })
-            } else {
-                return { error: config.userNotCustomer }
-            }
+                const user = await User.findOne({ _id:id })
+                if (!user) {
+                    return { error: config.userNotExists }
+                }
+                if ((user.role == 'customer') || (user.role == 'Customer')) {
+                    const newPassword = await bcrypt.hash(requestParams.password, 10)
+                    const updatedUser = await User.findByIdAndUpdate({ _id: id }, { $set: { password: newPassword } }, { new: true })
+                    await generatePasswordMail(user.name,user.email,requestParams.password)
+                    logger.info({ message: "user password updated" }, { info: updatedUser });
+                    return ({ success: config.recordPasswordUpdated })
+                } else {
+                    return { error: config.userNotCustomer }
+                }
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });

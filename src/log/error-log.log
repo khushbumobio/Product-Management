@@ -61,3 +61,10 @@
 {"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:24:19.525Z"}
 {"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:26:06.684Z"}
 {"level":"error","message":{"error_message":"generatePasswordMail is not a function"},"timestamp":"2023-01-27T10:30:16.987Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:47:41.678Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-01T07:47:58.083Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:48:30.505Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:49:25.410Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:50:19.768Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:52:12.428Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:52:30.861Z"}
