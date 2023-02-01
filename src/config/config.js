@@ -24,6 +24,7 @@ const config = {
     matchPassword: "password not matched with confirm password",
     notAllowed:"you are not allowed to update record",
     notAllowedCreate:"you are not allowed to create record",
-    dataNotFound:"No data found"
+    dataNotFound:"No data found",
+    categoryAlreadyAssign: "Category already assign",
 }
 module.exports=config;
