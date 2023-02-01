@@ -1,0 +1,38 @@
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:30:32.400Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:30:45.008Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:32:36.607Z"}
+{"level":"error","message":{"error_message":"user is not defined"},"timestamp":"2023-01-20T06:33:35.570Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:10:20.781Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:10:56.657Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:11:38.072Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:12:28.442Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:13:04.963Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:13:16.498Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:14:06.200Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:15:28.893Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:16:33.471Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:17:36.179Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:18:40.379Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:19:59.623Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:21:01.459Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:22:47.282Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:23:40.171Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:23:54.802Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:24:26.644Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:25:00.033Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:25:17.008Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:25:41.343Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:25:53.064Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T11:27:01.143Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-27T12:36:08.257Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:30:16.870Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:32:07.192Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:32:09.180Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:32:49.489Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:33:53.517Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:34:09.997Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:35:59.859Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:36:36.232Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:37:43.286Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:37:57.625Z"}
+{"level":"error","message":{"error_message":"Cast to ObjectId failed for value \"logout\" (type string) at path \"_id\" for model \"user\""},"timestamp":"2023-01-30T04:38:27.175Z"}
