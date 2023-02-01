@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors'); //configure the web API's security
 const morgan = require('morgan'); //for log HTTP requests and errors
+const indexRoutes = require('./routes/indexRoutes');
 const app = express();
 
 
@@ -14,6 +15,8 @@ app.use(morgan("dev"));
 //middleware
 app.use(express.json());
 app.use(cors());
+
+require('./routes/indexRoutes')(app)
 
 app.get("/new", (req, res) => {
     res.json({ message: "Welcome in Product Management Project" })
