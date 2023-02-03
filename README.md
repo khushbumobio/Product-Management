@@ -18,10 +18,15 @@ config folder contains db.js file which will help to connect database
 src folder contains controllers,models,middleware,routes,utills,config folders and app and index file
 
 src/controllers contains all controller like: authController,userController,categoryController,productController
+
 src/models contains all models like: user model,category model,product model
+
 routes contains all routes filles for product management
+
 utills contains mails for sendMail and generate password
       send mail use when customer created
       generate password use when customer want to generate password by admin
+      
 config folder a file where all the message defines
+      do not forget to add your email in emailUser and password in emailPassword of config/config.js
 
