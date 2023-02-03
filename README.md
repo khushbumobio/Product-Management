@@ -9,10 +9,15 @@ node src/index.js
 add below content in  .env file in product-management
 
 PORT = 3000
+
 API_URL = 'http://localhost:3000'
+
 DB_USERNAME = 'add db user name'
+
 DB_PASSWORD = 'add db password'
+
 DB_HOST = cluster0.fvzypzl.mongodb.net
+
 DB_NAME = 'product-management'
 
 config folder contains db.js file which will help to connect database
