@@ -3,6 +3,7 @@
 clone directory in your local machine
 
 npm install 
+
 node src/index.js
 
 add below content in  .env file in product-management
