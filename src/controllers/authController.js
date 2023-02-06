@@ -80,7 +80,7 @@ class authController {
             });
         }
     }
-    
+
     /**
      * generate Password 
      * @param {Request} req
@@ -88,23 +88,27 @@ class authController {
      * @returns
      * @author khushbuw
      */
-    static async generatePassword(req, res) {
+    static async generatePWD(req, res) {
         try {
             const requestParams = {
-                "password": req.body.password,
-                "cpassword": req.body.cpassword,
-            };
-            const id=req.params.id;
-            const data = await authService.generatePassword(id,requestParams);   
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
-            }
-            return res.status(config.successStatusCode).send(data)
+                            "password": req.body.password,
+                            "cpassword": req.body.cpassword,
+                        };
+                        const id=req.params.id;
+    const userRole=req.user.role
+    const data = await authService.generatePWD(id,requestParams,userRole);   
+    if (data.error) {
+        return res.status(config.successStatusCode).send(data);
+    }
+    return res.status(config.successStatusCode).send(data)
+           
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
         }
     }
+    
+    
 
 
     /**
@@ -151,12 +155,14 @@ class authController {
                 "password": req.body.password,
                 "cpassword": req.body.cpassword,
             };
-            const id=req.params.id;
-            const data = await authService.generatePassword(id,requestParams);  
+            const id = req.params.id;
+            const userRole = req.user.role
+            const data = await authService.generatePassword(id, requestParams, userRole);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
             return res.status(config.successStatusCode).send(data)
+
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
