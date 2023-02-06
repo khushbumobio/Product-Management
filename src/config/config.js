@@ -15,8 +15,8 @@ const config = {
     recordUpdated: "Record has been updated.",
     recordDeleted: "Record has been deleted.",
     logOut: "Logout successful",
-    emailUser: "add your email",
-    emailPassword: "add password",
+    emailUser: "khushbu.waghela@mobiosolutions.com",
+    emailPassword: "leyhzrygridlgtel",
     greetings: 'Hello ',
     userNotExists: "Given User is not exists",
     userNotCustomer: "Given User is not customer",
@@ -28,6 +28,7 @@ const config = {
     categoryAlreadyAssign: "Category already assign",
     invalidProductUpdates: "Invalid Updates",
     notAllow: "You are not allow to update product",
+    generatePasswordNotAllow: "You are not allow to access this page",
     noAllowDelete:"You are not allow to delete product",
 
 }
