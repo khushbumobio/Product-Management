@@ -196,6 +196,30 @@ class productService {
         }
     }
 
+    /**
+     * share product
+     * @param {object} requestParams
+     * @returns {object}
+     * @author khushbuw
+     */
+    static async shareProduct(productId) {
+        try {
+            const data = await Product.findOne({ _id: productId })
+
+            if (data) {
+
+            }
+            return ({
+                error: config.noData
+            });
+
+        } catch (err) {
+            logger.error({ error_message: err.message });
+            return ({ error_message: err.message });
+        }
+    }
+    
+
 
 }
 

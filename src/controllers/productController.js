@@ -130,6 +130,27 @@ class productController {
         }
     }
 
+     /**
+     * share Product
+     * @param {Request} req
+     * @param {JSON} res
+     * @returns
+     * @author khushbuw
+     */
+     static async shareProduct(req, res) {
+        try {
+            const productId = req.params.id;
+            const data = await productServices.shareProduct(productId);
+            if (data.error) {
+                 return res.status(config.successStatusCode).send(data);
+            }
+             return res.status(config.successStatusCode).send(data);
+        } catch (err) {
+             logger.error({ error_message: err.message });
+            return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
+        }
+    }
+
 }
 
 module.exports = productController;
