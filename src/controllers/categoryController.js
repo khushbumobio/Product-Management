@@ -16,7 +16,6 @@ class categoryController {
             const requestParams = {
                 "name": req.body.name,
             };
-            console.log(requestParams)
             const data = await categoryServices.createCategory(userRole,requestParams);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
@@ -66,8 +65,9 @@ class categoryController {
      */
     static async editCategory(req, res) {
         try {
+            const userRole=req.user.role
             const catId = req.params.id;
-            const data = await categoryServices.editCategory(catId);
+            const data = await categoryServices.editCategory(catId,userRole);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -87,11 +87,12 @@ class categoryController {
      */
      static async updateCategory(req, res) {
         try {
+            const userRole=req.user.role
             const requestParams = {
                 "name": req.body.name,
             };
             const id = req.params.id
-            const data = await categoryServices.updateCategory(id, requestParams);
+            const data = await categoryServices.updateCategory(id, requestParams,userRole);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -111,8 +112,9 @@ class categoryController {
      */
     static async deleteCategory(req, res) {
         try {
+            const userRole=req.user.role
             const userId = req.params.id;
-            const data = await categoryServices.deleteCategory(userId);
+            const data = await categoryServices.deleteCategory(userId,userRole);
             if (data.error) {
                  return res.status(config.successStatusCode).send(data);
             }

@@ -101,10 +101,10 @@ class productService {
         try {
             const id = productId
             const data = await Product.findOne({ _id: id })
+            if ((userId.role == 'Admin') || (userId.role == 'admin') || (userId._id == data.createdBy)) {
             if (!data) {
                 return ({ error: config.dataNotFound });
             }
-            if ((userId.role == 'Admin') || (userId.role == 'admin') || (userId._id == data.createdBy)) {
                 const productData = {
                     'id': data._id,
                     'name': data.name,
@@ -130,6 +130,7 @@ class productService {
      */
     static async updateProduct(id, requestParams,userId) {
         try {
+            
             const updates = Object.keys(requestParams)
             const allowedUpdates = ['name', 'category_id', 'description']
             const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -139,8 +140,11 @@ class productService {
             }
 
             const productData = await Product.findOne({ _id: id })
+
             if ((userId.role == 'Admin') || (userId.role == 'admin') || (userId._id == productData.createdBy)) {
-              
+                if (!productData) {
+                    return ({ error: config.dataNotFound });
+                }
                 let data = {
                     "name": requestParams.name,
                     "category_id": requestParams.category_id,

@@ -100,3 +100,5 @@
 {"level":"error","message":{"error_message":"authService.generatePassword is not a function"},"timestamp":"2023-02-06T11:46:43.513Z"}
 {"level":"error","message":{"error_message":"authService.generatePassword is not a function"},"timestamp":"2023-02-06T11:47:05.358Z"}
 {"level":"error","message":{"error_message":"userCheck is not defined"},"timestamp":"2023-02-06T12:50:06.659Z"}
+{"level":"error","message":{"error_message":"data is not defined"},"timestamp":"2023-02-08T04:30:52.803Z"}
+{"level":"error","message":{"error_message":"Cannot access 'data' before initialization"},"timestamp":"2023-02-08T04:35:17.304Z"}

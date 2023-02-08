@@ -13,7 +13,6 @@ class categoryService {
     static async createCategory(userRole,requestParams) {
         try {
             if ((userRole == 'Admin') || (userRole == 'admin')) {
-            console.log(requestParams)
                 if (!(requestParams.name) ) {
                     return ({ error: config.emptyFields });
                 }
@@ -86,8 +85,9 @@ class categoryService {
      * @returns {object}
      * @author khushbuw
      */
-    static async editCategory(catId) {
+    static async editCategory(catId,userRole) {
         try {
+            if ((userRole == 'Admin') || (userRole == 'admin')) {
             const id = catId
             const data = await Category.findOne({ _id: id })
             if (!data) {
@@ -98,6 +98,9 @@ class categoryService {
                 'name': data.name,
             }
             return ({ data: categoryData })
+        } else {
+            return ({ error: config.generatePasswordNotAllow });
+        }
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
@@ -110,8 +113,9 @@ class categoryService {
      * @returns {object}
      * @author khushbuw
      */
-    static async updateCategory(id, requestParams) {
+    static async updateCategory(id, requestParams,userRole) {
         try {
+            if ((userRole == 'Admin') || (userRole == 'admin')) {
             const updates = Object.keys(requestParams)
             const allowedUpdates = ['name']
             const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -122,6 +126,9 @@ class categoryService {
             const updatedCategory = await Category.findByIdAndUpdate({ _id: id }, requestParams)
             logger.info({ message: "Category updated" }, { info: updatedCategory });
             return ({ success: config.recordUpdated })
+        } else {
+            return ({ error: config.generatePasswordNotAllow });
+        }
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
@@ -134,8 +141,9 @@ class categoryService {
      * @returns {object}
      * @author khushbuw
      */
-    static async deleteCategory(catId) {
+    static async deleteCategory(catId,userRole) {
         try {
+            if ((userRole == 'Admin') || (userRole == 'admin')) {
             const data = await Category.findOne({ _id: catId })
             if (data) {
               const checkData = await Product.findOne({ category_id: data._id });
@@ -152,6 +160,9 @@ class categoryService {
             return {
               error: config.noData,
             };
+        } else {
+            return ({ error: config.generatePasswordNotAllow });
+        }
         } catch (err) {
             logger.error({ error_message: err.message });
             return ({ error_message: err.message });
