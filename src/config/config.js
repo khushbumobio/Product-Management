@@ -22,6 +22,14 @@ const config = {
     userNotCustomer: "Given User is not customer",
     recordPasswordUpdated: "password updated",
     matchPassword: "password not matched with confirm password",
-    notAllowed:"you are not allowed to update record"
+    notAllowed:"you are not allowed to update record",
+    notAllowedCreate:"you are not allowed to create record",
+    dataNotFound:"No data found",
+    categoryAlreadyAssign: "Category already assign",
+    invalidProductUpdates: "Invalid Updates",
+    notAllow: "You are not allow to update product",
+    generatePasswordNotAllow: "You are not allow to access this page",
+    noAllowDelete:"You are not allow to delete product",
+
 }
 module.exports=config;

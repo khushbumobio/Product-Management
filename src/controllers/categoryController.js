@@ -1,31 +1,22 @@
-const userService = require('../services/userServices')
-const bcrypt = require('bcrypt');
+const categoryServices = require('../services/categoryServices')
 const config = require('../config/config');
 const logger = require('../logger/logger')
 
-class userController {
+class categoryController {
     /**
-     * create user
+     * create category
      * @param {Request} req
      * @param {JSON} res
      * @returns
      * @author khushbuw
      */
-    static async createUser(req, res) {
+    static async createCategory(req, res) {
         try {
-            // return res.send('hi')
             const userRole=req.user.role
             const requestParams = {
                 "name": req.body.name,
-                "email": req.body.email,
-                "password": await bcrypt.hash(req.body.password, 10),
-                "phone_number": req.body.phone_number,
-                "address": req.body.address,
-                "role": req.body.role,
-                "merchent_type": req.body.merchent_type,
             };
-           const password=req.body.password;
-            const data = await userService.createUser(userRole,requestParams,password);
+            const data = await categoryServices.createCategory(userRole,requestParams);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -39,13 +30,13 @@ class userController {
 
 
     /**
-         * list of users
+         * list of category
          * @param {Request} req
          * @param {JSON} res
          * @returns
          * @author khushbuw
          */
-    static async listUser(req, res) {
+    static async listCategory(req, res) {
         try {
             const requestQueries = {
                 "limit": req.query.limit,
@@ -54,7 +45,7 @@ class userController {
                 "sortingMethod": req.query.orderby,
                 "key": req.query.search,
             }
-            const data = await userService.listUser(requestQueries);
+            const data = await categoryServices.listCategory(requestQueries);
             if (data.error) {
                  return res.status(config.successStatusCode).send(data);
             }
@@ -66,16 +57,17 @@ class userController {
     }
 
     /**
-     * edit user
+     * edit category
      * @param {Request} req
      * @param {JSON} res
      * @returns
      * @author khushbuw
      */
-    static async editUser(req, res) {
+    static async editCategory(req, res) {
         try {
-            const userId = req.params.id;
-            const data = await userService.editUser(userId);
+            const userRole=req.user.role
+            const catId = req.params.id;
+            const data = await categoryServices.editCategory(catId,userRole);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -87,23 +79,20 @@ class userController {
     }
 
      /**
-     * update users
+     * update category
      * @param {Request} req
      * @param {JSON} res
      * @returns
      * @author khushbuw
      */
-     static async updateUser(req, res) {
+     static async updateCategory(req, res) {
         try {
+            const userRole=req.user.role
             const requestParams = {
                 "name": req.body.name,
-                "phone_number": req.body.phone_number,
-                "address": req.body.address,
-                "role": req.body.role,
-                "merchent_type": req.body.merchent_type,
             };
             const id = req.params.id
-            const data = await userService.updateUser(id, requestParams);
+            const data = await categoryServices.updateCategory(id, requestParams,userRole);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -115,17 +104,17 @@ class userController {
     }
 
     /**
-     * delete user
+     * delete category
      * @param {Request} req
      * @param {JSON} res
      * @returns
      * @author khushbuw
      */
-    static async deleteUser(req, res) {
+    static async deleteCategory(req, res) {
         try {
-            const userId = req.params.id;
             const userRole=req.user.role
-            const data = await userService.deleteUser(userId,userRole);
+            const userId = req.params.id;
+            const data = await categoryServices.deleteCategory(userId,userRole);
             if (data.error) {
                  return res.status(config.successStatusCode).send(data);
             }
@@ -138,4 +127,4 @@ class userController {
 
 }
 
-module.exports = userController;
+module.exports = categoryController;

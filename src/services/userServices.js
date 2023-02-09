@@ -32,7 +32,7 @@ class userService {
                     success: config.recordCreated,
                 });
             } else {
-                return ({ error: config.notAllowed });
+                return ({ error: config.notAllowedCreate });
             }
 
 
@@ -154,8 +154,14 @@ class userService {
      * @returns {object}
      * @author khushbuw
      */
-    static async deleteUser(userId) {
+    static async deleteUser(userId,userRole) {
         try {
+            if ((userRole == 'customer') || (userRole == 'Customer')) 
+                {
+                    return ({
+                        success: config.generatePasswordNotAllow
+                    });
+                }
             const data = await User.findOne({ _id: userId })
             if (data) {
                 const deletedUser = await User.deleteOne({ _id: userId })

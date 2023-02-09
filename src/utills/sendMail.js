@@ -47,7 +47,6 @@ const sendMail = async(name, email, password) => {
  */
 const generatePasswordMail = async(name, email, password) => {
   try {
-    console.log(name)
       var transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {

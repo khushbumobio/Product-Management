@@ -68,3 +68,37 @@
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:50:19.768Z"}
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:52:12.428Z"}
 {"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-01T07:52:30.861Z"}
+{"level":"error","message":{"error_message":"Country is not defined"},"timestamp":"2023-02-01T08:11:50.014Z"}
+{"level":"error","message":{"error_message":"userId is not defined"},"timestamp":"2023-02-01T08:28:37.957Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of null (reading 'createdBy')"},"timestamp":"2023-02-01T08:29:35.094Z"}
+{"level":"error","message":{"error_message":"products validation failed: createdBy: Path `createdBy` is required."},"timestamp":"2023-02-01T08:42:07.171Z"}
+{"level":"error","message":{"error_message":"productId is not defined"},"timestamp":"2023-02-01T08:44:16.668Z"}
+{"level":"error","message":{"error_message":"productId is not defined"},"timestamp":"2023-02-01T08:44:49.362Z"}
+{"level":"error","message":{"error_message":"productId is not defined"},"timestamp":"2023-02-01T08:44:52.655Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of null (reading 'createdBy')"},"timestamp":"2023-02-01T08:53:28.312Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of null (reading 'createdBy')"},"timestamp":"2023-02-01T08:53:54.607Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of null (reading 'createdBy')"},"timestamp":"2023-02-01T09:59:03.383Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-03T07:30:31.748Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-03T07:30:51.036Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-03T07:38:43.984Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-03T07:38:52.861Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-03T07:39:02.617Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-03T08:42:44.132Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-03T08:42:57.405Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-03T08:43:23.605Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-03T08:43:25.878Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-03T08:43:30.840Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-03T11:08:25.909Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-03T11:08:46.791Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-03T11:09:16.624Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'error')"},"timestamp":"2023-02-06T04:19:20.755Z"}
+{"level":"error","message":{"error_message":"Cannot access 'user' before initialization"},"timestamp":"2023-02-06T11:01:16.480Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-06T11:01:45.560Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-06T11:45:56.034Z"}
+{"level":"error","message":{"error_message":"Cannot read properties of undefined (reading 'role')"},"timestamp":"2023-02-06T11:46:05.562Z"}
+{"level":"error","message":{"error_message":"authService.generatePassword is not a function"},"timestamp":"2023-02-06T11:46:31.836Z"}
+{"level":"error","message":{"error_message":"authService.generatePassword is not a function"},"timestamp":"2023-02-06T11:46:43.513Z"}
+{"level":"error","message":{"error_message":"authService.generatePassword is not a function"},"timestamp":"2023-02-06T11:47:05.358Z"}
+{"level":"error","message":{"error_message":"userCheck is not defined"},"timestamp":"2023-02-06T12:50:06.659Z"}
+{"level":"error","message":{"error_message":"data is not defined"},"timestamp":"2023-02-08T04:30:52.803Z"}
+{"level":"error","message":{"error_message":"Cannot access 'data' before initialization"},"timestamp":"2023-02-08T04:35:17.304Z"}

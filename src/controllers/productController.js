@@ -1,31 +1,25 @@
-const userService = require('../services/userServices')
-const bcrypt = require('bcrypt');
+const productServices = require('../services/productServices')
 const config = require('../config/config');
 const logger = require('../logger/logger')
 
-class userController {
+class productController {
     /**
-     * create user
+     * create Product
      * @param {Request} req
      * @param {JSON} res
      * @returns
      * @author khushbuw
      */
-    static async createUser(req, res) {
+    static async createProduct(req, res) {
         try {
-            // return res.send('hi')
-            const userRole=req.user.role
             const requestParams = {
+                "category_id": req.body.category_id,
                 "name": req.body.name,
-                "email": req.body.email,
-                "password": await bcrypt.hash(req.body.password, 10),
-                "phone_number": req.body.phone_number,
-                "address": req.body.address,
-                "role": req.body.role,
-                "merchent_type": req.body.merchent_type,
+                "description":req.body.description,
+                "createdBy":req.user._id
             };
-           const password=req.body.password;
-            const data = await userService.createUser(userRole,requestParams,password);
+            const user=req.user
+            const data = await productServices.createProduct(requestParams,user);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -39,13 +33,13 @@ class userController {
 
 
     /**
-         * list of users
+         * list of Product
          * @param {Request} req
          * @param {JSON} res
          * @returns
          * @author khushbuw
          */
-    static async listUser(req, res) {
+    static async listProduct(req, res) {
         try {
             const requestQueries = {
                 "limit": req.query.limit,
@@ -54,7 +48,7 @@ class userController {
                 "sortingMethod": req.query.orderby,
                 "key": req.query.search,
             }
-            const data = await userService.listUser(requestQueries);
+            const data = await productServices.listProduct(requestQueries);
             if (data.error) {
                  return res.status(config.successStatusCode).send(data);
             }
@@ -66,16 +60,17 @@ class userController {
     }
 
     /**
-     * edit user
+     * edit Product
      * @param {Request} req
      * @param {JSON} res
      * @returns
      * @author khushbuw
      */
-    static async editUser(req, res) {
+    static async editProduct(req, res) {
         try {
-            const userId = req.params.id;
-            const data = await userService.editUser(userId);
+            const productId = req.params.id;
+            const userId=req.user
+            const data = await productServices.editProduct(productId,userId);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -87,23 +82,22 @@ class userController {
     }
 
      /**
-     * update users
+     * update Product
      * @param {Request} req
      * @param {JSON} res
      * @returns
      * @author khushbuw
      */
-     static async updateUser(req, res) {
+     static async updateProduct(req, res) {
         try {
             const requestParams = {
+                "category_id": req.body.category_id,
                 "name": req.body.name,
-                "phone_number": req.body.phone_number,
-                "address": req.body.address,
-                "role": req.body.role,
-                "merchent_type": req.body.merchent_type,
+                "description":req.body.description,
             };
             const id = req.params.id
-            const data = await userService.updateUser(id, requestParams);
+            const userId=req.user
+            const data = await productServices.updateProduct(id, requestParams,userId);
             if (data.error) {
                 return res.status(config.successStatusCode).send(data);
             }
@@ -115,17 +109,17 @@ class userController {
     }
 
     /**
-     * delete user
+     * delete Product
      * @param {Request} req
      * @param {JSON} res
      * @returns
      * @author khushbuw
      */
-    static async deleteUser(req, res) {
+    static async deleteProduct(req, res) {
         try {
-            const userId = req.params.id;
-            const userRole=req.user.role
-            const data = await userService.deleteUser(userId,userRole);
+            const productId = req.params.id;
+            const userId=req.user
+            const data = await productServices.deleteProduct(productId,userId);
             if (data.error) {
                  return res.status(config.successStatusCode).send(data);
             }
@@ -138,4 +132,4 @@ class userController {
 
 }
 
-module.exports = userController;
+module.exports = productController;
