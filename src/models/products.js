@@ -3,7 +3,7 @@
  * @author khushbuw
  */
 const mongoose = require('mongoose');
-const country = require('./categories');
+const category = require('./categories');
 var Schema = mongoose.Schema;
 
 const productSchema = new mongoose.Schema({

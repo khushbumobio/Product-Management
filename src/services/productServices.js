@@ -4,7 +4,7 @@ const config = require("../config/config.js")
 const logger = require('../logger/logger')
 const QRCode = require('qrcode');
 const { json } = require("body-parser");
-var fs = require('fs');
+let fs = require('fs');
 
 class productService {
     /**
@@ -52,20 +52,18 @@ class productService {
      */
     static async listProduct(requestQueries) {
         try {
-            var sortObject = {};
+            let sortObject = {};
             const limit = requestQueries.limit
             const page = requestQueries.page
             const sort = requestQueries.sort
             const sortingMethod = requestQueries.sortingMethod
-            var key = requestQueries.key
+            let key = requestQueries.key
             if (!key) {
                 key = ''
             }
-            var productData;
-            var orderBy;
-            (sortingMethod === 'desc') ? orderBy = '-1' : orderBy = '1'
-            var skip;
-            (page <= 1) ? skip = 0 : skip = (page - 1) * limit
+            let productData;
+            const orderBy =  (sortingMethod === 'desc') ? -1 : 1;
+            const skip=(page <= 1) ? 0 : (page - 1) * limit;
             sortObject[sort] = orderBy;
             productData = await Product.find({
                 "$or": [
@@ -83,7 +81,7 @@ class productService {
                 return ({ error: config.userNotFound });
             }
             // call getProductData 
-            var finalProductData = await formatProduct(productData)
+            let finalProductData = await formatProduct(productData)
             return ({ data: finalProductData })
         } catch (err) {
             logger.error({ error_message: err.message });
@@ -101,7 +99,7 @@ class productService {
         try {
             const id = productId
             const data = await Product.findOne({ _id: id })
-            if ((userId.role == 'Admin') || (userId.role == 'admin') || (userId._id == data.createdBy)) {
+            if ((userId.role == 'admin') || (userId._id == data.createdBy)) {
             if (!data) {
                 return ({ error: config.dataNotFound });
             }
@@ -141,7 +139,7 @@ class productService {
 
             const productData = await Product.findOne({ _id: id })
 
-            if ((userId.role == 'Admin') || (userId.role == 'admin') || (userId._id == productData.createdBy)) {
+            if ((userId.role == 'admin') || (userId._id == productData.createdBy)) {
                 if (!productData) {
                     return ({ error: config.dataNotFound });
                 }
@@ -179,7 +177,7 @@ class productService {
     static async deleteProduct(productId,userId) {
         try {
             const data = await Product.findOne({ _id: productId })
-            if ((userId.role == 'Admin') || (userId.role == 'admin') || (userId._id == data.createdBy)) {
+            if ((userId.role == 'admin') || (userId._id == data.createdBy)) {
             if (data) {
                 const deletedProduct = await Product.deleteOne({ _id: productId })
                 logger.info({ message: "Product deleted", info: deletedProduct });
@@ -210,7 +208,7 @@ class productService {
 * @author khushbuw
 */
 const formatProduct = async (product) => {
-    var productDataMap = product.map((product) => {
+    let productDataMap = product.map((product) => {
         return {
             'id': product._id,
             'category_id': product.category_id,

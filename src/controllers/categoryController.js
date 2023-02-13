@@ -13,14 +13,15 @@ class categoryController {
     static async createCategory(req, res) {
         try {
             const userRole=req.user.role
+            const body=req.body;
             const requestParams = {
-                "name": req.body.name,
+                "name": body.name,
             };
-            const data = await categoryServices.createCategory(userRole,requestParams);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const categoryData = await categoryServices.createCategory(userRole,requestParams);
+            if (categoryData.error) {
+                return res.status(config.badRequestStatusCode).send(categoryData);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(categoryData);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -38,18 +39,19 @@ class categoryController {
          */
     static async listCategory(req, res) {
         try {
+            const query=req.query;
             const requestQueries = {
-                "limit": req.query.limit,
-                "page": req.query.page,
-                "sort": req.query.sort,
-                "sortingMethod": req.query.orderby,
-                "key": req.query.search,
+                "limit": query.limit,
+                "page": query.page,
+                "sort": query.sort,
+                "sortingMethod": query.orderby,
+                "key": query.search,
             }
-            const data = await categoryServices.listCategory(requestQueries);
-            if (data.error) {
-                 return res.status(config.successStatusCode).send(data);
+            const categoryData = await categoryServices.listCategory(requestQueries);
+            if (categoryData.error) {
+                 return res.status(config.badRequestStatusCode).send(categoryData);
             }
-            return res.status(config.successStatusCode).send(data);
+            return res.status(config.successStatusCode).send(categoryData);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -67,11 +69,11 @@ class categoryController {
         try {
             const userRole=req.user.role
             const catId = req.params.id;
-            const data = await categoryServices.editCategory(catId,userRole);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const categoryData = await categoryServices.editCategory(catId,userRole);
+            if (categoryData.error) {
+                return res.status(config.badRequestStatusCode).send(categoryData);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(categoryData);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -88,15 +90,16 @@ class categoryController {
      static async updateCategory(req, res) {
         try {
             const userRole=req.user.role
+            const body=req.body;
             const requestParams = {
-                "name": req.body.name,
+                "name": body.name,
             };
             const id = req.params.id
-            const data = await categoryServices.updateCategory(id, requestParams,userRole);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const categoryData = await categoryServices.updateCategory(id, requestParams,userRole);
+            if (categoryData.error) {
+                return res.status(config.badRequestStatusCode).send(categoryData);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(categoryData)
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send(err.message)
@@ -114,11 +117,11 @@ class categoryController {
         try {
             const userRole=req.user.role
             const userId = req.params.id;
-            const data = await categoryServices.deleteCategory(userId,userRole);
-            if (data.error) {
-                 return res.status(config.successStatusCode).send(data);
+            const categoryData = await categoryServices.deleteCategory(userId,userRole);
+            if (categoryData.error) {
+                 return res.status(config.badRequestStatusCode).send(categoryData);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(categoryData);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });

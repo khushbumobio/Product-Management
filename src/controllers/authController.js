@@ -17,11 +17,11 @@ class authController {
                 "password": req.body.password
             }
             // return res.send(requestParams)
-            const data = await authService.login(requestParams);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const authData = await authService.login(requestParams);
+            if (authData.error) {
+                return res.status(config.succesbadRequestStatusCodesStatusCode).send(authData);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(authData)
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -38,11 +38,11 @@ class authController {
     static async profile(req, res) {
         try {
             const user = req.user
-            const data = await authService.profile(user);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const authData = await authService.profile(user);
+            if (authData.error) {
+                return res.status(config.badRequestStatusCode).send(authData);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(authData)
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({
@@ -68,11 +68,11 @@ class authController {
                 "merchent_type": req.body.merchent_type,
             };
             const id = req.user._id
-            const data = await authService.updateProfile(id, requestParams);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const authData = await authService.updateProfile(id, requestParams);
+            if (authData.error) {
+                return res.status(config.badRequestStatusCode).send(authData);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(authData)
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({
@@ -99,11 +99,11 @@ class authController {
                 "merchent_type": req.body.merchent_type,
             };
             const id = req.user._id
-            const data = await authService.updateProfile(id, requestParams);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const authData = await authService.updateProfile(id, requestParams);
+            if (authData.error) {
+                return res.status(config.successStbadRequestStatusCodeatusCode).send(authData);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(authData)
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({
@@ -128,11 +128,11 @@ class authController {
             };
             const id = req.params.id;
             const userRole = req.user.role
-            const data = await authService.generatePassword(id, requestParams, userRole);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const authData = await authService.generatePassword(id, requestParams, userRole);
+            if (authData.error) {
+                return res.status(config.badRequestStatusCode).send(authData);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(authData)
 
         } catch (err) {
             logger.error({ error_message: err.message });
@@ -151,11 +151,11 @@ class authController {
     static async logOut(req, res) {
         try {
             const user = req.user
-            const data = await authService.logOut(user);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const authData = await authService.logOut(user);
+            if (authData.error) {
+                return res.status(config.badRequestStatusCode).send(authData);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(authData)
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });

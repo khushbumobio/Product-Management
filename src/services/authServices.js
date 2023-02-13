@@ -97,7 +97,7 @@ class authService {
      */
     static async generatePassword(id, requestParams, userRole) {
         try {
-            if ((userRole == 'customer') || (userRole == 'Customer')) {
+            if (userRole == 'customer') {
                 return {
                     error: config.generatePasswordNotAllow
                 }
@@ -112,7 +112,7 @@ class authService {
             if (!user) {
                 return { error: config.userNotExists }
             }
-            if ((user.role == 'customer') || (user.role == 'Customer')) {
+            if (user.role == 'customer') {
                 const newPassword = await bcrypt.hash(requestParams.password, 10)
                 const updatedUser = await User.findByIdAndUpdate({ _id: id }, { $set: { password: newPassword } }, { new: true })
                 await generatePasswordMail(user.name, user.email, requestParams.password)

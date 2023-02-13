@@ -12,7 +12,7 @@ class categoryService {
          */
     static async createCategory(userRole,requestParams) {
         try {
-            if ((userRole == 'Admin') || (userRole == 'admin')) {
+            if (userRole == 'admin') {
                 if (!(requestParams.name) ) {
                     return ({ error: config.emptyFields });
                 }
@@ -41,20 +41,18 @@ class categoryService {
      */
     static async listCategory(requestQueries) {
         try {
-            var sortObject = {};
+            let sortObject = {};
             const limit = requestQueries.limit
             const page = requestQueries.page
             const sort = requestQueries.sort
             const sortingMethod = requestQueries.sortingMethod
-            var key = requestQueries.key
+            let key = requestQueries.key
             if (!key) {
                 key = ''
             }
-            var categoryData;
-            var orderBy;
-            (sortingMethod === 'desc') ? orderBy = '-1' : orderBy = '1'
-            var skip;
-            (page <= 1) ? skip = 0 : skip = (page - 1) * limit
+            let categoryData;
+            const orderBy =  (sortingMethod === 'desc') ? -1 : 1;
+            const skip=(page <= 1) ? 0 : (page - 1) * limit;
             sortObject[sort] = orderBy;
             categoryData = await Category.find({
                 "$or": [
@@ -71,7 +69,7 @@ class categoryService {
                 return ({ error: config.userNotFound });
             }
             // call getCategoryData and get users data
-            var finalCategoryData = await formatCategory(categoryData)
+            let finalCategoryData = await formatCategory(categoryData)
             return ({ data: finalCategoryData })
         } catch (err) {
             logger.error({ error_message: err.message });
@@ -87,7 +85,7 @@ class categoryService {
      */
     static async editCategory(catId,userRole) {
         try {
-            if ((userRole == 'Admin') || (userRole == 'admin')) {
+            if (userRole == 'admin') {
             const id = catId
             const data = await Category.findOne({ _id: id })
             if (!data) {
@@ -115,7 +113,7 @@ class categoryService {
      */
     static async updateCategory(id, requestParams,userRole) {
         try {
-            if ((userRole == 'Admin') || (userRole == 'admin')) {
+            if (userRole == 'admin'){
             const updates = Object.keys(requestParams)
             const allowedUpdates = ['name']
             const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -143,7 +141,7 @@ class categoryService {
      */
     static async deleteCategory(catId,userRole) {
         try {
-            if ((userRole == 'Admin') || (userRole == 'admin')) {
+            if (userRole == 'admin'){
             const data = await Category.findOne({ _id: catId })
             if (data) {
               const checkData = await Product.findOne({ category_id: data._id });
@@ -179,7 +177,7 @@ class categoryService {
 * @author khushbuw
 */
 const formatCategory = async (category) => {
-    var categoryDataMap = category.map((category) => {
+    let categoryDataMap = category.map((category) => {
         return {
             'id': category._id,
             'name': category.name,

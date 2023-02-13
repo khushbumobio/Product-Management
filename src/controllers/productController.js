@@ -12,18 +12,19 @@ class productController {
      */
     static async createProduct(req, res) {
         try {
+            const user=req.user;
+            const body=req.body;
             const requestParams = {
-                "category_id": req.body.category_id,
-                "name": req.body.name,
-                "description":req.body.description,
-                "createdBy":req.user._id
+                "category_id": body.category_id,
+                "name": body.name,
+                "description":body.description,
+                "createdBy":user._id
             };
-            const user=req.user
-            const data = await productServices.createProduct(requestParams,user);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const product = await productServices.createProduct(requestParams,user);
+            if (product.error) {
+                return res.status(config.badRequestStatusCode).send(product);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(product);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -41,18 +42,19 @@ class productController {
          */
     static async listProduct(req, res) {
         try {
+            const query=req.query;
             const requestQueries = {
-                "limit": req.query.limit,
-                "page": req.query.page,
-                "sort": req.query.sort,
-                "sortingMethod": req.query.orderby,
-                "key": req.query.search,
+                "limit": query.limit,
+                "page": query.page,
+                "sort": query.sort,
+                "sortingMethod": query.orderby,
+                "key": query.search,
             }
-            const data = await productServices.listProduct(requestQueries);
-            if (data.error) {
-                 return res.status(config.successStatusCode).send(data);
+            const product = await productServices.listProduct(requestQueries);
+            if (product.error) {
+                 return res.status(config.badRequestStatusCode).send(product);
             }
-            return res.status(config.successStatusCode).send(data);
+            return res.status(config.successStatusCode).send(product);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -70,11 +72,11 @@ class productController {
         try {
             const productId = req.params.id;
             const userId=req.user
-            const data = await productServices.editProduct(productId,userId);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const product = await productServices.editProduct(productId,userId);
+            if (product.error) {
+                return res.status(config.badRequestStatusCode).send(product);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(product);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -90,18 +92,19 @@ class productController {
      */
      static async updateProduct(req, res) {
         try {
-            const requestParams = {
-                "category_id": req.body.category_id,
-                "name": req.body.name,
-                "description":req.body.description,
-            };
             const id = req.params.id
             const userId=req.user
-            const data = await productServices.updateProduct(id, requestParams,userId);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const body=req.body;
+            const requestParams = {
+                "category_id": body.category_id,
+                "name": body.name,
+                "description":body.description,
+            };
+            const product = await productServices.updateProduct(id, requestParams,userId);
+            if (product.error) {
+                return res.status(config.badRequestStatusCode).send(product);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(product)
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send(err.message)
@@ -119,11 +122,11 @@ class productController {
         try {
             const productId = req.params.id;
             const userId=req.user
-            const data = await productServices.deleteProduct(productId,userId);
-            if (data.error) {
-                 return res.status(config.successStatusCode).send(data);
+            const product = await productServices.deleteProduct(productId,userId);
+            if (product.error) {
+                 return res.status(config.badRequestStatusCode).send(product);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(product);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
