@@ -13,23 +13,23 @@ class userController {
      */
     static async createUser(req, res) {
         try {
-            // return res.send('hi')
-            const userRole=req.user.role
+            const userRole=req.user.role;
+            const body=req.body;
             const requestParams = {
-                "name": req.body.name,
-                "email": req.body.email,
-                "password": await bcrypt.hash(req.body.password, 10),
-                "phone_number": req.body.phone_number,
-                "address": req.body.address,
-                "role": req.body.role,
-                "merchent_type": req.body.merchent_type,
+                "name": body.name,
+                "email": body.email,
+                "password": await bcrypt.hash(body.password, 10),
+                "phone_number": body.phone_number,
+                "address": body.address,
+                "role": body.role.toLowerCase(),
+                "merchent_type": body.merchent_type,
             };
-           const password=req.body.password;
-            const data = await userService.createUser(userRole,requestParams,password);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+           const password=body.password;
+            const userData = await userService.createUser(userRole,requestParams,password);
+            if (userData.error) {
+                return res.status(config.badRequestStatusCode).send(userData);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(userData);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -47,18 +47,19 @@ class userController {
          */
     static async listUser(req, res) {
         try {
+            const query=req.query;
             const requestQueries = {
-                "limit": req.query.limit,
-                "page": req.query.page,
-                "sort": req.query.sort,
-                "sortingMethod": req.query.orderby,
-                "key": req.query.search,
+                "limit": query.limit,
+                "page": query.page,
+                "sort": query.sort,
+                "sortingMethod": query.orderby,
+                "key": query.search,
             }
-            const data = await userService.listUser(requestQueries);
-            if (data.error) {
-                 return res.status(config.successStatusCode).send(data);
+            const userData = await userService.listUser(requestQueries);
+            if (userData.error) {
+                 return res.status(config.badRequestStatusCode).send(userData);
             }
-            return res.status(config.successStatusCode).send(data);
+            return res.status(config.successStatusCode).send(userData);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -75,11 +76,11 @@ class userController {
     static async editUser(req, res) {
         try {
             const userId = req.params.id;
-            const data = await userService.editUser(userId);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const userData = await userService.editUser(userId);
+            if (userData.error) {
+                return res.status(config.badRequestStatusCode).send(userData);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(userData);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });
@@ -95,19 +96,20 @@ class userController {
      */
      static async updateUser(req, res) {
         try {
+            const body=req.body;
             const requestParams = {
-                "name": req.body.name,
-                "phone_number": req.body.phone_number,
-                "address": req.body.address,
-                "role": req.body.role,
-                "merchent_type": req.body.merchent_type,
+                "name": body.name,
+                "phone_number": body.phone_number,
+                "address": body.address,
+                "role": body.role,
+                "merchent_type": body.merchent_type,
             };
             const id = req.params.id
-            const data = await userService.updateUser(id, requestParams);
-            if (data.error) {
-                return res.status(config.successStatusCode).send(data);
+            const userData = await userService.updateUser(id, requestParams);
+            if (userData.error) {
+                return res.status(config.badRequestStatusCode).send(userData);
             }
-            return res.status(config.successStatusCode).send(data)
+            return res.status(config.successStatusCode).send(userData)
         } catch (err) {
             logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send(err.message)
@@ -124,12 +126,11 @@ class userController {
     static async deleteUser(req, res) {
         try {
             const userId = req.params.id;
-            const userRole=req.user.role
-            const data = await userService.deleteUser(userId,userRole);
-            if (data.error) {
-                 return res.status(config.successStatusCode).send(data);
+            const userData = await userService.deleteUser(userId,req.user.role);
+            if (userData.error) {
+                 return res.status(config.badRequestStatusCode).send(userData);
             }
-             return res.status(config.successStatusCode).send(data);
+             return res.status(config.successStatusCode).send(userData);
         } catch (err) {
              logger.error({ error_message: err.message });
             return res.status(config.internalServerErrorStatusCode).send({ error_message: err.message });

@@ -30,6 +30,6 @@ const config = {
     notAllow: "You are not allow to update product",
     generatePasswordNotAllow: "You are not allow to access this page",
     noAllowDelete:"You are not allow to delete product",
-
+    badRequestStatusCode: 400,
 }
 module.exports=config;

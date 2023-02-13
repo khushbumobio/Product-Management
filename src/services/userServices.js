@@ -14,7 +14,7 @@ class userService {
          */
     static async createUser(userRole, requestParams,password) {
         try {
-            if ((userRole == 'Admin') || (userRole == 'admin')) {
+            if (userRole == 'admin') {
                 if (!(requestParams.name || requestParams.email || requestParams.password || requestParams.phone_number || requestParams.address || requestParams.role || requestParams.merchent_type)) {
                     return ({ error: config.emptyFields });
                 }
@@ -52,20 +52,18 @@ class userService {
      */
     static async listUser(requestQueries) {
         try {
-            var sortObject = {};
+            let sortObject = {};
             const limit = requestQueries.limit
             const page = requestQueries.page
             const sort = requestQueries.sort
             const sortingMethod = requestQueries.sortingMethod
-            var key = requestQueries.key
+            let key = requestQueries.key
             if (!key) {
                 key = ''
             }
-            var userData;
-            var orderBy;
-            (sortingMethod === 'desc') ? orderBy = '-1' : orderBy = '1'
-            var skip;
-            (page <= 1) ? skip = 0 : skip = (page - 1) * limit
+            let userData;
+            const orderBy =  (sortingMethod === 'desc') ? -1 : 1;
+            const skip=(page <= 1) ? 0 : (page - 1) * limit;
             sortObject[sort] = orderBy;
             userData = await User.find({
                 "$or": [
@@ -87,7 +85,7 @@ class userService {
                 return ({ error: config.userNotFound });
             }
             // call getUserData and get users data
-            var finalUserData = await formatUser(userData)
+            let finalUserData = await formatUser(userData)
             return ({ data: finalUserData })
         } catch (err) {
             logger.error({ error_message: err.message });
@@ -156,7 +154,7 @@ class userService {
      */
     static async deleteUser(userId,userRole) {
         try {
-            if ((userRole == 'customer') || (userRole == 'Customer')) 
+            if(userRole == 'customer')  
                 {
                     return ({
                         success: config.generatePasswordNotAllow
@@ -189,7 +187,7 @@ class userService {
 * @author khushbuw
 */
 const formatUser = async (user) => {
-    var userDataMap = user.map((user) => {
+    let userDataMap = user.map((user) => {
         return {
             'id': user._id,
             'name': user.name,
